@@ -1,4 +1,4 @@
-version : '3.0'
+version : '3.1'
 
 
 nlu:
@@ -50,199 +50,165 @@ nlu:
     - Comment tu t'appelles?
     - Es-tu un robot
 
-- intent: faq/PIB
-  examples: |
-    - Où puis-je trouver les publications les plus récentes de l'Agence Nationale de la Statistique et de la Démographie sur le Produit Intérieur Brut (PIB) du Sénégal?
-    - Quels sont les liens directs vers les rapports officiels de l'ANSD qui présentent les chiffres actuels du Produit Intérieur Brut du Sénégal?
-    - Pouvez-vous me guider vers les publications spécifiques de l'ANSD qui analysent les composantes et les secteurs contribuant au PIB sénégalais?
-    - Quelles sont les tendances récentes en matière de croissance économique, selon les derniers rapports du Produit Intérieur Brut?
-    - Pourriez-vous me fournir les références des publications les plus pertinentes de l'ANSD sur le PIB, en mettant l'accent sur des analyses approfondies ou des perspectives futures?
-    - Où puis-je trouver les publications les plus récentes de l'Agence Nationale de la Statistique et de la Démographie sur le Produit Intérieur Brut (PIB) du Sénégal?
-    - Quels sont les liens directs vers les rapports officiels de l'ANSD qui présentent les chiffres actuels du Produit Intérieur Brut du Sénégal?
-    - Pouvez-vous me guider vers les publications spécifiques de l'ANSD qui analysent les composantes et les secteurs contribuant au PIB sénégalais?
-    - Quelles sont les tendances récentes en matière de croissance économique, selon les derniers rapports du Produit Intérieur Brut?
-    - Pourriez-vous me fournir les références des publications les plus pertinentes de l'ANSD sur le PIB, en mettant l'accent sur des analyses approfondies ou des perspectives futures?
 - intent: faq/statistique_emploi
   examples: |
-    - Où puis-je trouver des données sur le taux de chômage dans ma région?
-    - Comment accéder aux chiffres concernant l'évolution de l'emploi dans le secteur technologique?
-    - Où puis-je trouver des informations sur la répartition des emplois par secteur d'activité au niveau national?
-    - Quelles sont les perspectives d'emploi pour les jeunes diplômés cette année?
-    - Où puis-je trouver des données sur le taux de chômage dans ma région?
-    - Comment accéder aux chiffres concernant l'évolution de l'emploi dans le secteur technologique?
-    - Où puis-je trouver des informations sur la répartition des emplois par secteur d'activité au niveau national?
-    - Quelles sont les perspectives d'emploi pour les jeunes diplômés cette année?
-- intent: faq/COMMERCE_EXTERIEUR
-  examples: |
-    - Où puis-je trouver des données spécifiques sur les importations et les exportations du pays?
-    - Quels sont les principaux partenaires commerciaux du pays, selon les statistiques les plus récentes sur le commerce extérieur?
-    - Pourriez-vous me guider vers les chiffres concernant le solde commercial et la balance des paiements du pays?
-    - Quelles sont les tendances actuelles en matière de commerce extérieur, en particulier pour certains secteurs spécifiques?
-    - Pouvez-vous me fournir des informations récentes sur les statistiques du commerce extérieur?
-    - Où puis-je trouver des données spécifiques sur les importations et les exportations du pays?
-    - Quels sont les principaux partenaires commerciaux du pays, selon les statistiques les plus récentes sur le commerce extérieur?
-    - Pourriez-vous me guider vers les chiffres concernant le solde commercial et la balance des paiements du pays?
-    - Quelles sont les tendances actuelles en matière de commerce extérieur, en particulier pour certains secteurs spécifiques?
-    - Pouvez-vous me fournir des informations récentes sur les statistiques du commerce extérieur?
-- intent: faq/NEER
-  examples: |
-    - Où puis-je trouver la dernière Note sur l'Évolution Économique Récente (NEER) du Sénégal?
-    - Quelles sont les tendances économiques actuelles au Sénégal, selon la dernière Note sur l'Évolution Économique Récente?
-    - Pourriez-vous me diriger vers les publications les plus récentes qui détaillent les facteurs influençant l'évolution économique selon la NEER?
-    - Quels sont les secteurs clés abordés dans la Note sur l'Évolution Économique Récente, et où puis-je accéder à des informations détaillées à leur sujet?
-    - Pouvez-vous me fournir des liens vers des analyses spécifiques ou des conclusions importantes de la dernière NEER publiée par l'Agence Nationale de la Statistique et de la Démographie du Sénégal?
-    - Où puis-je trouver la dernière Note sur l'Évolution Économique Récente (NEER) du Sénégal?
-    - Quelles sont les tendances économiques actuelles au Sénégal, selon la dernière Note sur l'Évolution Économique Récente?
-    - Pourriez-vous me diriger vers les publications les plus récentes qui détaillent les facteurs influençant l'évolution économique selon la NEER?
-    - Quels sont les secteurs clés abordés dans la Note sur l'Évolution Économique Récente, et où puis-je accéder à des informations détaillées à leur sujet?
-    - Pouvez-vous me fournir des liens vers des analyses spécifiques ou des conclusions importantes de la dernière NEER publiée par l'Agence Nationale de la Statistique et de la Démographie du Sénégal?
+    - je veux consulter les données sur le taux de chômage?
+    - Comment accéder aux chiffres concernant l'évolution de l'emploi?
+    - ou se trouve les informations sur la répartition des emplois par secteur d'activité?
+    - comment consulté le taux de chômage de cette année
+    - conduis-moi vers les publications concernant l'emploi
+    - je veux consulté les données sur l'emploi des jeunes
+    - quels publications traite l'emploi
 - intent: faq/MORTALITE
   examples: |
-    - Où puis-je consulter les études les plus récentes de l'Agence Nationale de la Statistique et de la Démographie du Sénégal sur la mortalité au niveau national?
-    - Quels sont les liens directs vers les publications de l'ANSD qui présentent des données détaillées sur les taux de mortalité au Sénégal, en particulier par région ou découpage démographique?
-    - Pouvez-vous me diriger vers les rapports spécifiques de l'ANSD sur la mortalité au Sénégal, en mettant l'accent sur les variations géographiques ou sociodémographiques?
-    - Quelles sont les tendances récentes en matière de mortalité au Sénégal, et existe-t-il des analyses détaillées par groupes démographiques?
-    - Pourriez-vous me fournir les références des publications les plus pertinentes de l'ANSD sur la mortalité, y compris des données détaillées par tranche d'âge et par région?
-    - Où puis-je consulter les études les plus récentes de l'Agence Nationale de la Statistique et de la Démographie du Sénégal sur la mortalité au niveau national?
-    - Quels sont les liens directs vers les publications de l'ANSD qui présentent des données détaillées sur les taux de mortalité au Sénégal, en particulier par région ou découpage démographique?
-    - Pouvez-vous me diriger vers les rapports spécifiques de l'ANSD sur la mortalité au Sénégal, en mettant l'accent sur les variations géographiques ou sociodémographiques?
-    - Quelles sont les tendances récentes en matière de mortalité au Sénégal, et existe-t-il des analyses détaillées par groupes démographiques?
-    - Pourriez-vous me fournir les références des publications les plus pertinentes de l'ANSD sur la mortalité, y compris des données détaillées par tranche d'âge et par région?
-- intent: faq/ICAI
+    - Je veux consulter les études  sur la mortalité au niveau national?
+    - donne moi le lien vers les publications de l'ANSD qui contiennent des données sur les taux de mortalité?
+    - Pouvez-vous me diriger vers les rapports spécifiques de l'ANSD sur la mortalité au Sénégal?
+    - quelles publications traitent de la mortalité juvenile?
+    - oriente moi vers  publications sur la mortalité, y compris des données détaillées par tranche d'âge et par région?
+- intent: faq/situation_economique_sociale_nationale
   examples: |
-    - Où puis-je trouver les derniers chiffres de l'indice du chiffre d'affaires industriel?
-    - Quelle est la tendance récente de l'indice du chiffre d'affaires industriel dans le pays?
-    - Pouvez-vous me diriger vers les publications les plus récentes concernant l'évolution de l'indice du chiffre d'affaires dans le secteur industriel?
-    - Pourriez-vous me fournir des détails sur la méthodologie utilisée pour calculer l'indice du chiffre d'affaires industriel, et où puis-je accéder à ces informations?
-    - Quels sont les facteurs qui ont influencé les variations de l'indice du chiffre d'affaires industriel, selon les données les plus récentes?
-    - Où puis-je trouver les derniers chiffres de l'indice du chiffre d'affaires industriel?
-    - Quelle est la tendance récente de l'indice du chiffre d'affaires industriel dans le pays?
-    - Pouvez-vous me diriger vers les publications les plus récentes concernant l'évolution de l'indice du chiffre d'affaires dans le secteur industriel?
-    - Pourriez-vous me fournir des détails sur la méthodologie utilisée pour calculer l'indice du chiffre d'affaires industriel, et où puis-je accéder à ces informations?
-    - Quels sont les facteurs qui ont influencé les variations de l'indice du chiffre d'affaires industriel, selon les données les plus récentes?
-- intent: faq/BULLETIN_MENSUEL_STATISTIQUES_ECONOMIQUES
-  examples: |
-    - Où puis-je trouver le dernier Bulletin Mensuel des Statistiques Économiques et Financières du Sénégal?
-    - Quelles sont les principales données économiques et financières présentées dans le dernier Bulletin Mensuel, et où puis-je les consulter?
-    - Pouvez-vous me diriger vers les liens pertinents pour explorer les indicateurs clés du dernier Bulletin Mensuel des Statistiques Économiques et Financières?
-    - Où puis-je trouver le dernier Bulletin Mensuel des Statistiques Économiques et Financières du Sénégal?
-    - Quelles sont les principales données économiques et financières présentées dans le dernier Bulletin Mensuel, et où puis-je les consulter?
-    - Pouvez-vous me diriger vers les liens pertinents pour explorer les indicateurs clés du dernier Bulletin Mensuel des Statistiques Économiques et Financières?
-- intent: faq/EDS_SANTE
-  examples: |
-    - Où puis-je trouver les résultats les plus récents de l'Enquête Démographique et de Santé (EDS) menée au Sénégal?
-    - Quels sont les liens directs vers les publications de l'Agence Nationale de la Statistique et de la Démographie qui présentent les résultats détaillés de l'EDS?
-    - Pouvez-vous me guider vers les rapports spécifiques de l'ANSD sur les indicateurs démographiques et de santé issus de l'Enquête Démographique et de Santé?
-    - Quelles sont les tendances actuelles en matière de santé et démographie au Sénégal, telles qu'indiquées par les derniers résultats de l'EDS?
-    - Pourriez-vous me fournir les références des publications les plus pertinentes de l'ANSD basées sur l'Enquête Démographique et de Santé, notamment celles détaillant des analyses approfondies?
-    - Où puis-je trouver les résultats les plus récents de l'Enquête Démographique et de Santé (EDS) menée au Sénégal?
-    - Quels sont les liens directs vers les publications de l'Agence Nationale de la Statistique et de la Démographie qui présentent les résultats détaillés de l'EDS?
-    - Pouvez-vous me guider vers les rapports spécifiques de l'ANSD sur les indicateurs démographiques et de santé issus de l'Enquête Démographique et de Santé?
-    - Quelles sont les tendances actuelles en matière de santé et démographie au Sénégal, telles qu'indiquées par les derniers résultats de l'EDS?
-    - Pourriez-vous me fournir les références des publications les plus pertinentes de l'ANSD basées sur l'Enquête Démographique et de Santé, notamment celles détaillant des analyses approfondies?
-- intent: faq/RGE
-  examples: |
-    - Pouvez-vous me fournir des informations sur le dernier Recensement Général des Entreprises (RGE)?
-    - Quels sont les résultats clés du Recensement Général des Entreprises (RGE) en 2016?
-    - Où puis-je trouver le rapport global du Recensement Général des Entreprises (RGE) 2016?
-    - Quelle est la répartition régionale des unités économiques selon le dernier Recensement Général des Entreprises?
-    - Pourriez-vous me guider vers les détails sur la structure juridique des entreprises selon le RGE 2016?
-    - Pouvez-vous me fournir des informations sur le dernier Recensement Général des Entreprises (RGE)?
-    - Quels sont les résultats clés du Recensement Général des Entreprises (RGE) en 2016?
-    - Où puis-je trouver le rapport global du Recensement Général des Entreprises (RGE) 2016?
-    - Quelle est la répartition régionale des unités économiques selon le dernier Recensement Général des Entreprises?
-    - Pourriez-vous me guider vers les détails sur la structure juridique des entreprises selon le RGE 2016?
-- intent: faq/statistiques_démographiques
-  examples: |
-    - Où puis-je trouver les statistiques les plus récentes sur la démographie du Sénégal?
-    - Quels sont les chiffres actuels concernant la population totale du Sénégal, et où puis-je trouver des détails démographiques plus spécifiques?
-    - Pouvez-vous me diriger vers les publications qui présentent des données démographiques détaillées, telles que la répartition par âge, sexe et région?
-    - Pourriez-vous m'indiquer où trouver des informations sur la croissance démographique, les taux de natalité et de mortalité, ainsi que d'autres indicateurs démographiques clés?
-    - Où puis-je trouver les statistiques les plus récentes sur la démographie du Sénégal?
-    - Quels sont les chiffres actuels concernant la population totale du Sénégal, et où puis-je trouver des détails démographiques plus spécifiques?
-    - Pouvez-vous me diriger vers les publications qui présentent des données démographiques détaillées, telles que la répartition par âge, sexe et région?
-    - Pourriez-vous m'indiquer où trouver des informations sur la croissance démographique, les taux de natalité et de mortalité, ainsi que d'autres indicateurs démographiques clés?
-- intent: faq/statistiques_agricoles
-  examples: |
-    - Où puis-je trouver des données sur la production agricole dans ma région?
-    - Comment accéder aux chiffres concernant les exportations agricoles du pays?
-    - Où puis-je trouver des informations sur la consommation alimentaire nationale?
-    - Quel est le rendement moyen des cultures cette année?
-    - Où puis-je trouver des informations détaillées sur les tendances du marché des produits agricoles?
-    - Où puis-je trouver des données sur la production agricole dans ma région?
-    - Comment accéder aux chiffres concernant les exportations agricoles du pays?
-    - Où puis-je trouver des informations sur la consommation alimentaire nationale?
-    - Quel est le rendement moyen des cultures cette année?
-    - Où puis-je trouver des informations détaillées sur les tendances du marché des produits agricoles?
-- intent: faq/REPERE_STATISTIQUE
-  examples: |
-    - Où puis-je accéder à la publication 'Repères statistiques' qui synthétise les indicateurs des publications régulières de l'ANSD?
-    - Pourriez-vous me fournir des informations récentes provenant de la publication 'Repères statistiques' de l'ANSD, en particulier en ce qui concerne l'évolution de certains indicateurs clés?
-    - Pouvez-vous me diriger vers les liens pertinents pour explorer en détail les indicateurs clés présentés dans la publication 'Repères statistiques'?
-    - Où puis-je accéder à la publication 'Repères statistiques' qui synthétise les indicateurs des publications régulières de l'ANSD?
-    - Pourriez-vous me fournir des informations récentes provenant de la publication 'Repères statistiques' de l'ANSD, en particulier en ce qui concerne l'évolution de certains indicateurs clés?
-    - Pouvez-vous me diriger vers les liens pertinents pour explorer en détail les indicateurs clés présentés dans la publication 'Repères statistiques'?
-- intent: faq/MATRICE_COMTABILITE_SOCIALE
-  examples: |
-    - Comment puis-je accéder à la matrice de la comptabilité sociale sur l'économie du Sénégal?
-    - Où trouver les dernières publications concernant la comptabilité sociale et ses implications sur l'économie nationale?
-    - Quelles sont les principales données incluses dans la matrice de la comptabilité sociale, et où puis-je les consulter?
-    - Pouvez-vous me guider vers les liens pertinents pour explorer la contribution des différents secteurs à la comptabilité sociale du Sénégal?
-    - Pourriez-vous m'indiquer les informations les plus récentes sur la matrice de la comptabilité sociale, notamment en ce qui concerne les agrégats économiques clés?
-    - Comment puis-je accéder à la matrice de la comptabilité sociale sur l'économie du Sénégal?
-    - Où trouver les dernières publications concernant la comptabilité sociale et ses implications sur l'économie nationale?
-    - Quelles sont les principales données incluses dans la matrice de la comptabilité sociale, et où puis-je les consulter?
-    - Pouvez-vous me guider vers les liens pertinents pour explorer la contribution des différents secteurs à la comptabilité sociale du Sénégal?
-    - Pourriez-vous m'indiquer les informations les plus récentes sur la matrice de la comptabilité sociale, notamment en ce qui concerne les agrégats économiques clés?
-- intent: faq/MIGRATION
-  examples: |
-    - Pouvez-vous me diriger vers les rapports officiels sur les mouvements migratoires récents au Sénégal, en particulier les chiffres et les tendances?
-    - Quels sont les liens directs vers les publications de l'ANSD fournissant des données détaillées sur les flux migratoires et la répartition des migrants?
-    - Pourriez-vous me fournir les références des publications les plus pertinentes de l'ANSD sur les questions de migration, y compris les causes et les conséquences?
-    - Où trouver des rapports spécifiques sur l'impact de la migration sur la démographie et l'économie sénégalaises
-    - Où puis-je consulter les publications les plus récentes sur les statistiques liées à la migration?
-    - Pouvez-vous me diriger vers les rapports officiels sur les mouvements migratoires récents au Sénégal, en particulier les chiffres et les tendances?
-    - Quels sont les liens directs vers les publications de l'ANSD fournissant des données détaillées sur les flux migratoires et la répartition des migrants?
-    - Pourriez-vous me fournir les références des publications les plus pertinentes de l'ANSD sur les questions de migration, y compris les causes et les conséquences?
-    - Où trouver des rapports spécifiques sur l'impact de la migration sur la démographie et l'économie sénégalaises
-    - Où puis-je consulter les publications les plus récentes sur les statistiques liées à la migration?
-- intent: faq/NATALITE
-  examples: |
-    - Pourriez-vous me fournir les références des publications les plus pertinentes de l'ANSD sur la natalité, y compris des données détaillées par tranche d'âge et par région?
-    - Pouvez-vous me guider vers les rapports spécifiques sur la fécondité au Sénégal, en mettant l'accent sur les variations géographiques ou sociodémographiques?
-    - Quels sont les liens directs vers les publications de l'ANSD qui détaillent les taux de natalité au Sénégal, en particulier par région ou découpage démographique?
-    - Où puis-je trouver des études récentes de l'Agence Nationale de la Statistique et de la Démographie du Sénégal sur la natalité au niveau national?
-    - Pourriez-vous me fournir les références des publications les plus pertinentes de l'ANSD sur la natalité, y compris des données détaillées par tranche d'âge et par région?
-    - Pouvez-vous me guider vers les rapports spécifiques sur la fécondité au Sénégal, en mettant l'accent sur les variations géographiques ou sociodémographiques?
-    - Quels sont les liens directs vers les publications de l'ANSD qui détaillent les taux de natalité au Sénégal, en particulier par région ou découpage démographique?
-    - Où puis-je trouver des études récentes de l'Agence Nationale de la Statistique et de la Démographie du Sénégal sur la natalité au niveau national?
-- intent: faq/IHPI
-  examples: |
-    - Où puis-je trouver la publication sur l'Indice Harmonisé de la Production Industrielle
-    - Pouvez-vous me guider vers les liens pertinents pour explorer en détail les composantes spécifiques de l'Indice Harmonisé sur la Production Industrielle?
-    - Où puis-je trouver la publication sur l'Indice Harmonisé de la Production Industrielle
-    - Pouvez-vous me guider vers les liens pertinents pour explorer en détail les composantes spécifiques de l'Indice Harmonisé sur la Production Industrielle?
+    - je veux télécharger la situation économique du pays
+    - où puis-je trouver le ses national
+    - dans quelle rubrique se trouve la situation économique et sociale
+    - où trouver les données détaillées sur la situation du pays
+    - je cherche des statistiques sur le sport
 - intent: faq/POPULATION
   examples: |
     - Où puis-je trouver les données les plus récentes sur la population totale du Sénégal?
-    - Quels sont les chiffres actuels de la répartition démographique par région au Sénégal?
-    - Pouvez-vous me fournir des informations détaillées sur la pyramide des âges de la population sénégalaise?
-    - Quelles sont les tendances récentes en matière de croissance démographique au Sénégal?
-    - Où puis-je accéder à des données spécifiques sur la composition ethnique de la population sénégalaise?
-    - Où puis-je trouver les données les plus récentes sur la population totale du Sénégal?
-    - Quels sont les chiffres actuels de la répartition démographique par région au Sénégal?
-    - Pouvez-vous me fournir des informations détaillées sur la pyramide des âges de la population sénégalaise?
-    - Quelles sont les tendances récentes en matière de croissance démographique au Sénégal?
-    - Où puis-je accéder à des données spécifiques sur la composition ethnique de la population sénégalaise?
+    - j'aimerai consulté  la répartition démographique par région au Sénégal?
+    - je souhaite disposer des informations détaillées sur la pyramide des âges de la population sénégalaise?
+    - je veux consulter les tendances  en matière de croissance démographique au Sénégal?
+    - Où puis-je accéder à des données sur la composition ethnique de la population sénégalaise?
+- intent: faq/statistiques_Agriculture
+  examples: |
+    - je souhaite avoir les données sur la production agricole ?
+    - je veux consulter les données sur les bovins
+    - Comment accéder aux données sur l'élevage du pays?
+    - Où puis-je trouver les informations sur la pêche au Sénégal
+    - montre moi le rapport sur les rendements des cultures?
+    - je voudrais avoir des données sur les cultures au Sénégal
+    - quels publications traite l'agriculture
+    - je veux le lien pour télécharger les statistiques agricoles
+- intent: faq/enquetes_etude
+  examples: |
+    - quels sont les enquêtes en cours?
+    - où puis-je consulté les enquêtes de l'ansd
+    - quelles sont les activitées de l'ANSD
+    - quel lien mène vers les enquêtes en vigueur
+    - quels sont les défis en cours
+- intent: faq/statistiques_demographiques
+  examples: |
+    - Où puis-je trouver les statistiques sur la démographie du Sénégal?
+    - dans quelle rubrique je peux consulter la population totale du Sénégal ?
+    - Pouvez-vous me diriger vers les publications qui présentent des données démographiques  telles que la répartition par âge, sexe et région?
+    - indique moi où trouver des informations sur la croissance démographique?
 - intent: faq/statistiques_entreprise
   examples: |
     - Où puis-je trouver des informations détaillées sur les statistiques d'entreprises?
-    - Comment puis-je accéder aux données actualisées concernant les performances des entreprises?
-    - Pour obtenir des statistiques précises sur les entreprises, vers quel lien devrais-je me diriger?
-    - Où trouver des données fiables sur les indicateurs économiques des entreprises?
-    - Comment accéder rapidement aux statistiques les plus récentes liées aux entreprises?
-    - Où puis-je trouver des informations détaillées sur les statistiques d'entreprises?
-    - Comment puis-je accéder aux données actualisées concernant les performances des entreprises?
-    - Pour obtenir des statistiques précises sur les entreprises, vers quel lien devrais-je me diriger?
-    - Où trouver des données fiables sur les indicateurs économiques des entreprises?
-    - Comment accéder rapidement aux statistiques les plus récentes liées aux entreprises?
+    - Comment puis-je accéder aux données concernant les  entreprises?
+    - Comment obtenir des statistiques  sur les entreprises?
+    - Où trouver des données sur les indicateurs économiques des entreprises?
+    - Comment accéder aux statistiques sur les immatriculations
+    - où télécharger la BDEF
+    - Dans quelle rubrique je peux consulter l'évolution des chiffres d'affaires des entreprises
+    - Pouvez-vous me fournir des informations sur le NINEA?
+    - Quels sont les résultats clés du Recensement Général des Entreprises (RGE) en 2016?
+    - Où puis-je trouver le rapport global du Recensement Général des Entreprises (RGE) 
+    - je souhaite consulter la répartions des entreprises à [Dakar](région) ?
+    - je souhaite connaitre l'évolution des entreprises
+    - Pourriez-vous me guider vers les détails sur la structure juridique des entreprises selon le RGE 2016?
+- intent: faq/ressources
+  examples: |
+    - où trouver les méthodes utilisées dans les enquêtes
+    - je cherche la documentation
+    - je souhaite télécharger la note méthodologique
+    - Où puis-je trouver la documentation concernant les enquêtes
+    - quelle rubriques traite des forumules de calcules
+- intent: faq/synthese_economique
+  examples: |
+    - Où puis-je accéder à la publication Repères statistiques ?
+    - Pourriez-vous m'indiquer la page pour consulter le Repères statistiques.
+    - aide moi à télécharger le dernier repère statistique
+    - je veux disposer du repère
+    - Pouvez-vous me diriger vers le Repères statistiques.
+    - Où puis-je trouver le dernier Bulletin Mensuel des Statistiques Économiques et Financières du Sénégal?
+    - je veux télécharger le dernier bulletin mensuel statistiques
+    - je cherche le bulletin des statistiques économiques
+    - Quel lien mène vers le bulletin économique?
+    - bulletin mensuel 
+    - Où puis-je trouver la dernière Note sur l'Évolution Économique Récente (NEER) du Sénégal?
+    - je souhaite télécharger le NEER
+    - Dirige moi vers les publications concernant la NEER?
+    - où puis-je accéder au informations concernant l'évolution de l'économie?
+    - Pouvez-vous me fournir les liens vers   la dernière NEER 
+- intent: faq/MIGRATION
+  examples: |
+    - Pouvez-vous me diriger vers les rapports  sur les mouvements migratoires  au Sénégal ?
+    - je veux accèder aux données  sur les flux migratoires et la répartition des migrants?
+    - quels publications traite des questions de migration?
+    - Où trouver des rapports  sur l'impact de la migration sur la démographie ?
+    - je souhaite consulter les publications sur les statistiques liées à la migration?
+    - avez-vous  des enquêtes sur la migration
+    - où trouver les données sur la mobilité internationale
+- intent: faq/societe
+  examples: |
+    - je veux des informations sur le marché du travail au Sénégal
+    - Quel lien pour les données sur l'éducation
+    - Où puis-je trouver les données sur le genre
+    - Quelle rubrique traite les aspects de l'habitat
+    - je souhaite avoir des statistiques sur la justice
+- intent: faq/PRIX
+  examples: |
+    - Où puis-je trouver les derniers chiffres de l'indice du chiffre d'affaires industriel (ICAI)?
+    - je souhaite télécharger le dernier  ICAI
+    - donne moi le lien qui mène à l'Indice harmonisé des prix à la consommation.
+    - ou trouver l'indice du chiffre d'affaires
+    - je veux consulter l'Indice de production des services
+    - Où puis-je trouver la publication sur l'Indice Harmonisé de la Production Industrielle
+    - donne moi le lien pour consulter  l'IHPI
+    - où consulter l'Indice des prix de la production industriel
+    - je cherche à consulter l'indice harmonisé des prix industriel
+    - où trouver la dernière publication de l'indice des prix à la construction
+- intent: faq/Echange_EXTERIEUR
+  examples: |
+    - Où puis-je trouver des données spécifiques sur les importations et les exportations du pays?
+    - conduis moi vers les données sur le commerce extérieur?
+    - je souhaite consulter le solde commercial et la balance des paiements du pays?
+    - où trouver des données sur l'import-export?
+    - Pouvez-vous me fournir des informations récentes sur les statistiques du commerce extérieur?
+    - je veux télécharge le bulletin mensuel des statistiques du commerce extérieur
+    - je veux consulter la NACE
+    - où consulter la dernière note d'analyse du commerce extérieur
+    - dans quel rubrique se trouve le bulletin mensuel des prix du commerce extérieur
+- intent: faq/croissance_economique
+  examples: |
+    - Où puis-je trouver les publications concernant le Produit Intérieur Brut du Sénégal?
+    - Quel lien mène vers les chiffres actuels du PIB?
+    - je veux télécharger le dernier rapport sur le PIB trimestriel
+    - Oriente moi vers les raports sur le pib
+    - quelle rubrique traite du produit intérieur brut
+    - Comment puis-je accéder aux tableaux des ressources et des emplois
+    - Où trouver les dernières publications concernant la comptabilité sociale et ses implications sur l'économie nationale?
+    - je veux accéder aux tableaux sur les comptes nationaux
+    - où consulter les comptes des secteurs institutionnels
+    - où consulter les tableaux des économies intégrées
+- intent: faq/NATALITE
+  examples: |
+    - Où trouver les informations sur la natalité par région?
+    - Pouvez-vous me guider vers les rapports  sur la fécondité au Sénégal?
+    - je  veux télécharger les données sur la fécondité
+    - indique moi le lien  vers les publications sur le taux de natalité au Sénégal
+    - Où puis-je trouver des études récentes de l'ANSD sur la natalité au niveau national?
+    - Où puis-je trouver les résultats les plus récents de l'Enquête Démographique et de Santé  menée au Sénégal?
+    - je cherche à consulter les résultats de l'EDS?
+    - je veux des statistiques sur la santé publique
+    - je veux télécharger le dernier rapport de l'EDS
+    - donne moi le lien pour télécharger l'EDS
+- intent: faq/situation_economique_sociale_regionale
+  examples: |
+    - je veux des informations sur ma région
+    - où consulter le ses de [dakar](région)
+    - je veux des connaitre l'économie de [kaolack](région)
+    - je souhaite télécharger la SES de [Thiès](région)
+    - quelles publications concernent les régions

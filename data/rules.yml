@@ -1,14 +1,15 @@
 version: "3.0"
 
 rules:
-  - rule: respond to FAQs
+  - rule: "respond to FAQs"
     steps:
-    - intent: faq
-    - action: utter_faq
-  - rule: respond to chitchat
+      - intent: faq
+      - action: utter_faq
+
+  - rule: "respond to chitchat"
     steps:
-    - intent: chitchat
-    - action: utter_chitchat
+      - intent: chitchat
+      - action: utter_chitchat
 
 
 

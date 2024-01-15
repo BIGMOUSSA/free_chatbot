@@ -25,3 +25,15 @@
 #         dispatcher.utter_message(text="Hello World!")
 #
 #         return []
+from typing import Any, Text, Dict, List
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+
+class ActionHandleLowConfidence(Action):
+    def name(self) -> Text:
+        return "action_handle_low_confidence"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        # Custom logic for handling low confidence
+        dispatcher.utter_message("I'm sorry, but I'm not sure about that. Can you please rephrase?")
+        return []
