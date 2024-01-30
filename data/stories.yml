@@ -1,0 +1,30 @@
+stories:
+- story: cherche à télécharger une publication
+  steps:
+  - user: |
+      bonjour
+    intent: salutation
+  - action: utter_chitchat
+  - user: |
+      je voudrais consulter le dernier rapport sur l'indice du chiffre d'affaires
+    intent: faq
+  - action: utter_faq
+  - user: |
+      super 
+    intent: AuRevoir
+  - action: utter_chitchat
+
+- story: parle moi de la situation économique du pays
+  steps:
+  - user: |
+      salut
+    intent: salutation
+  - action: utter_chitchat
+  - user: |
+      parle moi de la situation économique du pays
+    intent: NLG
+  - action: action_nlg
+  - user: |
+      merci de votre aide, à plus
+    intent: AuRevoir
+  - action : utter_chitchat

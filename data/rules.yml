@@ -9,3 +9,15 @@ rules:
     steps:
     - intent: chitchat
     - action: utter_chitchat
+  - rule: Execute action_nlg when user want more details about publications
+    steps:
+      - intent: NLG
+      - action: action_nlg
+ # - rule: reformulation
+ #   steps:
+ #   - intent: nlu_fallback
+ #   - action: utter_please_rephrase
+# rules.yml
+
+#rules:
+

@@ -2,55 +2,85 @@ version : '3.0'
 
 
 nlu:
-- intent: chitchat/salutation
+- intent: faq/Recrutement
   examples: |
-    - salut
-    - cava
-    - comment vas-tu
-    - Bonjour
-    - Bonsoir
-    - hey
-    - toc toc
-
-- intent: chitchat/Au_revoir
+    - Le recrutement des agents se fait comment
+    - Comment participer à une enquête
+    - Comment faire pour travailler à l'ANSD ?
+    - Comment déposer pour faire stage
+    - je veux faire mon stage à l'ansd
+- intent: chitchat/AuRevoir
   examples: |
     - à bientôt
     - Merci
     - Ciao Ciao
     - bye
-
-- intent: faq/recrutement
+- intent: faq/ressources
   examples: |
-    - Le recrutement des agents se fait comment
-    - Pourrais-je participer à une enquête
-    - Comment faire pour travailler à l'ANSD ?
-
-
-- intent: faq/apropos_ansd
+    - où trouver les méthodes utilisées dans les enquêtes
+    - je cherche la documentation
+    - je souhaite télécharger la note méthodologique
+    - Où puis-je trouver la documentation concernant les enquêtes
+    - quelle rubriques traite des formules de calcules
+- intent: faq/POPULATION
   examples: |
-    - C'est quoi l'ANSD
-    - Quelle est la mission de l'ANSD
-    - Que fait l'ANSD
-    - Que signigifie l'ANSD
-
-- intent: faq/loc_ansd
+    - Où puis-je trouver les données les plus récentes sur la population totale du Sénégal?
+    - j'aimerai consulté  la répartition démographique par région au Sénégal?
+    - je souhaite disposer des informations détaillées sur la pyramide des âges de la population sénégalaise?
+    - je veux consulter les tendances  en matière de croissance démographique au Sénégal?
+    - Où puis-je accéder à des données sur la composition ethnique de la population sénégalaise?
+- intent: faq/NATALITE
   examples: |
-    - Où se trouve l'ANSD ?
-    - Comment se rendre à l'ANSD ?
-    - Quelle est l'adresse de l'ANSD ?
-
-- intent: faq/internet_link
+    - Où trouver les informations sur la natalité par région?
+    - Pouvez-vous me guider vers les rapports  sur la fécondité au Sénégal?
+    - je  veux télécharger les données sur la fécondité
+    - indique moi le lien  vers les publications sur le taux de natalité au Sénégal
+    - Où puis-je trouver des études récentes de l'ANSD sur la natalité au niveau national?
+    - Où puis-je trouver les résultats les plus récents de l'Enquête Démographique et de Santé  menée au Sénégal?
+    - je cherche à consulter les résultats de l'EDS?
+    - je veux des statistiques sur la santé publique
+    - je veux télécharger le dernier rapport de l'EDS
+    - donne moi le lien pour télécharger l'EDS
+- intent: NLG
   examples: |
-    - Quel est le site web de l'ansd
-    - Quel est le lien vers le site de l'ansd
-
-- intent: chitchat/bot
+    - quel est le pib du sénégal
+    - quel est le taux de croissance en 2022
+    - je veux connaitre la population du Sénégal
+    - quel est le taux de chômage
+    - quelle est la population de Dakar
+    - parle moi de l'économie sénégalaise
+    - quel est le niveau des exportations
+    - quelle est le montant des recettes fiscales
+    - quel est le taux de prévalence
+    - quelle est la région la plus peuplée
+    - quelle est la région la plus pauvre
+    - quel est le niveau de pauvreté au Sénégal
+    - fait moi un résumé de l'EDS
+    - fait moi un résumé du RGE
+    - je veux le résumé du rapport trimestiel
+    - donne moi les informations clés de l'enquête sur l'emploi
+- intent: faq/société
   examples: |
-    - Qui est-tu?
-    - Comment tu t'appelles?
-    - Es-tu un robot
-
-- intent: faq/statistique_emploi
+    - je veux des informations sur le marché du travail au Sénégal
+    - Quel lien pour les données sur l'éducation
+    - Où puis-je trouver les données sur le genre
+    - Quelle rubrique traite les aspects de l'habitat
+    - je souhaite avoir des statistiques sur la justice
+- intent: faq/MORTALITE
+  examples: |
+    - Je veux consulter les études  sur la mortalité au niveau national?
+    - donne moi le lien vers les publications de l'ANSD qui contiennent des données sur les taux de mortalité?
+    - Pouvez-vous me diriger vers les rapports spécifiques de l'ANSD sur la mortalité au Sénégal?
+    - quelles publications traitent de la mortalité juvenile?
+    - oriente moi vers  publications sur la mortalité, y compris des données détaillées par tranche d'âge et par région?
+- intent: faq/ses_nationale
+  examples: |
+    - je veux télécharger la situation économique du pays
+    - où puis-je trouver le ses national
+    - dans quelle rubrique se trouve la situation économique et sociale
+    - où trouver les données détaillées sur la situation du pays
+    - je cherche des statistiques sur le sport
+- intent: faq/Emploi
   examples: |
     - je veux consulter les données sur le taux de chômage?
     - Comment accéder aux chiffres concernant l'évolution de l'emploi?
@@ -59,50 +89,11 @@ nlu:
     - conduis-moi vers les publications concernant l'emploi
     - je veux consulté les données sur l'emploi des jeunes
     - quels publications traite l'emploi
-- intent: faq/MORTALITE
+- intent: faq/Localisation
   examples: |
-    - Je veux consulter les études  sur la mortalité au niveau national?
-    - donne moi le lien vers les publications de l'ANSD qui contiennent des données sur les taux de mortalité?
-    - Pouvez-vous me diriger vers les rapports spécifiques de l'ANSD sur la mortalité au Sénégal?
-    - quelles publications traitent de la mortalité juvenile?
-    - oriente moi vers  publications sur la mortalité, y compris des données détaillées par tranche d'âge et par région?
-- intent: faq/situation_économique_sociale_nationale
-  examples: |
-    - je veux télécharger la situation économique du pays
-    - où puis-je trouver le ses national
-    - dans quelle rubrique se trouve la situation économique et sociale
-    - où trouver les données détaillées sur la situation du pays
-    - je cherche des statistiques sur le sport
-- intent: faq/POPULATION
-  examples: |
-    - Où puis-je trouver les données les plus récentes sur la population totale du Sénégal?
-    - j'aimerai consulté  la répartition démographique par région au Sénégal?
-    - je souhaite disposer des informations détaillées sur la pyramide des âges de la population sénégalaise?
-    - je veux consulter les tendances  en matière de croissance démographique au Sénégal?
-    - Où puis-je accéder à des données sur la composition ethnique de la population sénégalaise?
-- intent: faq/statistiques_Agriculture
-  examples: |
-    - je souhaite avoir les données sur la production agricole ?
-    - je veux consulter les données sur les bovins
-    - Comment accéder aux données sur l'élevage du pays?
-    - Où puis-je trouver les informations sur la pêche au Sénégal
-    - montre moi le rapport sur les rendements des cultures?
-    - je voudrais avoir des données sur les cultures au Sénégal
-    - quels publications traite l'agriculture
-    - je veux le lien pour télécharger les statistiques agricoles
-- intent: faq/enquêtes_étude
-  examples: |
-    - quels sont les enquêtes en cours?
-    - où puis-je consulté les enquêtes de l'ansd
-    - quelles sont les activitées de l'ANSD
-    - quel lien mène vers les enquêtes en vigueur
-    - quels sont les défis en cours
-- intent: faq/statistiques_démographiques
-  examples: |
-    - Où puis-je trouver les statistiques sur la démographie du Sénégal?
-    - dans quelle rubrique je peux consulter la population totale du Sénégal ?
-    - Pouvez-vous me diriger vers les publications qui présentent des données démographiques  telles que la répartition par âge, sexe et région?
-    - indique moi où trouver des informations sur la croissance démographique?
+    - Où se trouve l'ANSD ?
+    - Comment se rendre à l'ANSD ?
+    - Quelle est l'adresse de l'ANSD ?
 - intent: faq/statistiques_entreprise
   examples: |
     - Où puis-je trouver des informations détaillées sur les statistiques d'entreprises?
@@ -118,13 +109,20 @@ nlu:
     - je souhaite consulter la répartions des entreprises à [Dakar](région) ?
     - je souhaite connaitre l'évolution des entreprises
     - Pourriez-vous me guider vers les détails sur la structure juridique des entreprises selon le RGE 2016?
-- intent: faq/ressources
+- intent: faq/CroissanceEconomique
   examples: |
-    - où trouver les méthodes utilisées dans les enquêtes
-    - je cherche la documentation
-    - je souhaite télécharger la note méthodologique
-    - Où puis-je trouver la documentation concernant les enquêtes
-    - quelle rubriques traite des forumules de calcules
+    - Où puis-je trouver les publications concernant le Produit Intérieur Brut du Sénégal?
+    - Quel lien mène vers les chiffres actuels du PIB?
+    - je veux télécharger le dernier rapport sur le PIB trimestriel
+    - Oriente moi vers les raports sur le pib
+    - quelle rubrique traite du produit intérieur brut
+    - Comment puis-je accéder aux tableaux des ressources et des emplois
+    - je veux télécharger le rapport sur le taux de croissance
+    - Où trouver les dernières publications concernant la comptabilité sociale et ses implications sur l'économie nationale?
+    - où consulter le taux de croissance économique en 2022
+    - je veux accéder aux tableaux sur les comptes nationaux
+    - où consulter les comptes des secteurs institutionnels
+    - où consulter les tableaux des économies intégrées
 - intent: faq/synthèse_économique
   examples: |
     - Où puis-je accéder à la publication Repères statistiques ?
@@ -142,22 +140,44 @@ nlu:
     - Dirige moi vers les publications concernant la NEER?
     - où puis-je accéder au informations concernant l'évolution de l'économie?
     - Pouvez-vous me fournir les liens vers   la dernière NEER 
+- intent: faq/ses_régionale
+  examples: |
+    - je veux des informations sur ma région
+    - où consulter la situation économique et sociale de [dakar](région)
+    - je veux des connaitre l'économie de [kaolack](région)
+    - je souhaite télécharger la SES de [Thiès](région)
+    - quelles publications concernent les régions
+- intent: faq/EnquêtesEtude
+  examples: |
+    - quels sont les enquêtes en cours?
+    - où puis-je consulté les enquêtes de l'ansd
+    - quelles sont les activitées de l'ANSD
+    - quel lien mène vers les enquêtes en vigueur
+    - quels sont les défis en cours
+- intent: chitchat/bot
+  examples: |
+    - Qui est-tu?
+    - Comment tu t'appelles?
+    - Es-tu un robot
 - intent: faq/MIGRATION
   examples: |
     - Pouvez-vous me diriger vers les rapports  sur les mouvements migratoires  au Sénégal ?
     - je veux accèder aux données  sur les flux migratoires et la répartition des migrants?
-    - quels publications traite des questions de migration?
+    - quels publications traite des questions d'immigration?
     - Où trouver des rapports  sur l'impact de la migration sur la démographie ?
     - je souhaite consulter les publications sur les statistiques liées à la migration?
-    - avez-vous  des enquêtes sur la migration
+    - avez-vous  des enquêtes sur l'émigration
     - où trouver les données sur la mobilité internationale
-- intent: faq/société
+- intent: faq/Agriculture
   examples: |
-    - je veux des informations sur le marché du travail au Sénégal
-    - Quel lien pour les données sur l'éducation
-    - Où puis-je trouver les données sur le genre
-    - Quelle rubrique traite les aspects de l'habitat
-    - je souhaite avoir des statistiques sur la justice
+    - je souhaite avoir les données sur la production agricole ?
+    - je veux consulter les données sur les bovins
+    - Comment accéder aux données sur l'élevage du pays?
+    - Où puis-je trouver les informations sur la pêche au Sénégal
+    - montre moi le rapport sur les rendements des cultures?
+    - je voudrais avoir des données sur les cultures au Sénégal
+    - quels publications traite l'agriculture
+    - je veux le lien pour télécharger les statistiques agricoles
 - intent: faq/PRIX
   examples: |
     - Où puis-je trouver les derniers chiffres de l'indice du chiffre d'affaires industriel (ICAI)?
@@ -170,7 +190,26 @@ nlu:
     - où consulter l'Indice des prix de la production industriel
     - je cherche à consulter l'indice harmonisé des prix industriel
     - où trouver la dernière publication de l'indice des prix à la construction
-- intent: faq/Echange_EXTERIEUR
+- intent: faq/AproposANSD
+  examples: |
+    - C'est quoi l'ANSD
+    - Quelle est la mission de l'ANSD
+    - Que fait l'ANSD
+    - Que signigifie l'ANSD
+- intent: chitchat/salutation
+  examples: |
+    - salut
+    - cava
+    - comment vas-tu
+    - Bonjour
+    - Bonsoir
+    - hey
+    - toc toc
+- intent: faq/LienSiteWeb
+  examples: |
+    - Quel est le site web de l'ansd
+    - Quel est le lien vers le site de l'ansd
+- intent: faq/EchangeEXTERIEUR
   examples: |
     - Où puis-je trouver des données spécifiques sur les importations et les exportations du pays?
     - conduis moi vers les données sur le commerce extérieur?
@@ -181,34 +220,9 @@ nlu:
     - je veux consulter la NACE
     - où consulter la dernière note d'analyse du commerce extérieur
     - dans quel rubrique se trouve le bulletin mensuel des prix du commerce extérieur
-- intent: faq/croissance_économique
+- intent: faq/Démographie
   examples: |
-    - Où puis-je trouver les publications concernant le Produit Intérieur Brut du Sénégal?
-    - Quel lien mène vers les chiffres actuels du PIB?
-    - je veux télécharger le dernier rapport sur le PIB trimestriel
-    - Oriente moi vers les raports sur le pib
-    - quelle rubrique traite du produit intérieur brut
-    - Comment puis-je accéder aux tableaux des ressources et des emplois
-    - Où trouver les dernières publications concernant la comptabilité sociale et ses implications sur l'économie nationale?
-    - je veux accéder aux tableaux sur les comptes nationaux
-    - où consulter les comptes des secteurs institutionnels
-    - où consulter les tableaux des économies intégrées
-- intent: faq/NATALITE
-  examples: |
-    - Où trouver les informations sur la natalité par région?
-    - Pouvez-vous me guider vers les rapports  sur la fécondité au Sénégal?
-    - je  veux télécharger les données sur la fécondité
-    - indique moi le lien  vers les publications sur le taux de natalité au Sénégal
-    - Où puis-je trouver des études récentes de l'ANSD sur la natalité au niveau national?
-    - Où puis-je trouver les résultats les plus récents de l'Enquête Démographique et de Santé  menée au Sénégal?
-    - je cherche à consulter les résultats de l'EDS?
-    - je veux des statistiques sur la santé publique
-    - je veux télécharger le dernier rapport de l'EDS
-    - donne moi le lien pour télécharger l'EDS
-- intent: faq/situation_économique_sociale_égionale
-  examples: |
-    - je veux des informations sur ma région
-    - où consulter le ses de [dakar](région)
-    - je veux des connaitre l'économie de [kaolack](région)
-    - je souhaite télécharger la SES de [Thiès](région)
-    - quelles publications concernent les régions
+    - Où puis-je trouver les statistiques sur la démographie du Sénégal?
+    - dans quelle rubrique je peux consulter la population totale du Sénégal ?
+    - Pouvez-vous me diriger vers les publications qui présentent des données démographiques  telles que la répartition par âge, sexe et région?
+    - indique moi où trouver des informations sur la croissance démographique?
