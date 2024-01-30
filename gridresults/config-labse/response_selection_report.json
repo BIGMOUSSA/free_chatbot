@@ -1,0 +1,261 @@
+{
+  "faq/Localisation": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3,
+    "confused_with": {
+      "faq/AproposANSD": 2,
+      "faq/Recrutement": 1
+    }
+  },
+  "chitchat/bot": {
+    "precision": 0.5,
+    "recall": 0.3333333333333333,
+    "f1-score": 0.4,
+    "support": 3,
+    "confused_with": {
+      "chitchat/salutation": 2
+    }
+  },
+  "faq/ses_nationale": {
+    "precision": 0.2,
+    "recall": 0.2,
+    "f1-score": 0.20000000000000004,
+    "support": 5,
+    "confused_with": {
+      "faq/EnquêtesEtude": 1,
+      "faq/ses_régionale": 1
+    }
+  },
+  "chitchat/AuRevoir": {
+    "precision": 0.75,
+    "recall": 0.75,
+    "f1-score": 0.75,
+    "support": 4,
+    "confused_with": {
+      "chitchat/salutation": 1
+    }
+  },
+  "faq/Emploi": {
+    "precision": 0.45454545454545453,
+    "recall": 0.7142857142857143,
+    "f1-score": 0.5555555555555556,
+    "support": 7,
+    "confused_with": {
+      "faq/CroissanceEconomique": 1,
+      "faq/PRIX": 1
+    }
+  },
+  "faq/MIGRATION": {
+    "precision": 0.8333333333333334,
+    "recall": 0.7142857142857143,
+    "f1-score": 0.7692307692307692,
+    "support": 7,
+    "confused_with": {
+      "faq/société": 1,
+      "faq/NATALITE": 1
+    }
+  },
+  "faq/MORTALITE": {
+    "precision": 1.0,
+    "recall": 0.6,
+    "f1-score": 0.7499999999999999,
+    "support": 5,
+    "confused_with": {
+      "faq/NATALITE": 2
+    }
+  },
+  "faq/CroissanceEconomique": {
+    "precision": 0.5454545454545454,
+    "recall": 0.5,
+    "f1-score": 0.5217391304347826,
+    "support": 12,
+    "confused_with": {
+      "faq/synthèse_économique": 2,
+      "faq/Emploi": 2
+    }
+  },
+  "faq/LienSiteWeb": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2,
+    "confused_with": {
+      "faq/ses_régionale": 1,
+      "faq/AproposANSD": 1
+    }
+  },
+  "faq/AproposANSD": {
+    "precision": 0.375,
+    "recall": 0.75,
+    "f1-score": 0.5,
+    "support": 4,
+    "confused_with": {
+      "faq/EnquêtesEtude": 1
+    }
+  },
+  "faq/ses_régionale": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 5,
+    "confused_with": {
+      "faq/statistiques_entreprise": 2,
+      "faq/synthèse_économique": 1,
+      "faq/ses_nationale": 1
+    }
+  },
+  "faq/Agriculture": {
+    "precision": 0.16666666666666666,
+    "recall": 0.125,
+    "f1-score": 0.14285714285714288,
+    "support": 8,
+    "confused_with": {
+      "faq/PRIX": 2,
+      "faq/NATALITE": 2,
+      "faq/ses_régionale": 1
+    }
+  },
+  "faq/PRIX": {
+    "precision": 0.5454545454545454,
+    "recall": 0.6,
+    "f1-score": 0.5714285714285713,
+    "support": 10,
+    "confused_with": {
+      "faq/NATALITE": 2,
+      "faq/synthèse_économique": 1
+    }
+  },
+  "faq/NATALITE": {
+    "precision": 0.3,
+    "recall": 0.6,
+    "f1-score": 0.4,
+    "support": 10,
+    "confused_with": {
+      "faq/Agriculture": 2,
+      "faq/AproposANSD": 1
+    }
+  },
+  "chitchat/salutation": {
+    "precision": 0.625,
+    "recall": 0.7142857142857143,
+    "f1-score": 0.6666666666666666,
+    "support": 7,
+    "confused_with": {
+      "chitchat/AuRevoir": 1,
+      "chitchat/bot": 1
+    }
+  },
+  "faq/EnquêtesEtude": {
+    "precision": 0.2,
+    "recall": 0.2,
+    "f1-score": 0.20000000000000004,
+    "support": 5,
+    "confused_with": {
+      "faq/société": 1,
+      "faq/ses_nationale": 1,
+      "faq/AproposANSD": 1
+    }
+  },
+  "faq/Recrutement": {
+    "precision": 0.6666666666666666,
+    "recall": 0.4,
+    "f1-score": 0.5,
+    "support": 5,
+    "confused_with": {
+      "faq/Localisation": 2,
+      "faq/Emploi": 1
+    }
+  },
+  "faq/EchangeEXTERIEUR": {
+    "precision": 0.625,
+    "recall": 0.5555555555555556,
+    "f1-score": 0.5882352941176471,
+    "support": 9,
+    "confused_with": {
+      "faq/synthèse_économique": 3,
+      "faq/CroissanceEconomique": 1
+    }
+  },
+  "faq/POPULATION": {
+    "precision": 0.6,
+    "recall": 0.6,
+    "f1-score": 0.6,
+    "support": 5,
+    "confused_with": {
+      "faq/Démographie": 1,
+      "faq/NATALITE": 1
+    }
+  },
+  "faq/synthèse_économique": {
+    "precision": 0.4444444444444444,
+    "recall": 0.5333333333333333,
+    "f1-score": 0.4848484848484848,
+    "support": 15,
+    "confused_with": {
+      "faq/EchangeEXTERIEUR": 2,
+      "faq/ressources": 1
+    }
+  },
+  "faq/ressources": {
+    "precision": 0.5,
+    "recall": 0.2,
+    "f1-score": 0.28571428571428575,
+    "support": 5,
+    "confused_with": {
+      "faq/synthèse_économique": 1,
+      "faq/société": 1
+    }
+  },
+  "faq/statistiques_entreprise": {
+    "precision": 0.6363636363636364,
+    "recall": 0.5384615384615384,
+    "f1-score": 0.5833333333333334,
+    "support": 13,
+    "confused_with": {
+      "faq/synthèse_économique": 2,
+      "faq/EnquêtesEtude": 1
+    }
+  },
+  "faq/société": {
+    "precision": 0.25,
+    "recall": 0.2,
+    "f1-score": 0.22222222222222224,
+    "support": 5,
+    "confused_with": {
+      "faq/ses_nationale": 2,
+      "faq/Agriculture": 1
+    }
+  },
+  "faq/Démographie": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 4,
+    "confused_with": {
+      "faq/NATALITE": 2,
+      "faq/Agriculture": 1,
+      "faq/POPULATION": 1
+    }
+  },
+  "accuracy": 0.4620253164556962,
+  "macro avg": {
+    "precision": 0.4257470538720538,
+    "recall": 0.4095225376475376,
+    "f1-score": 0.4038263106837276,
+    "support": 158
+  },
+  "weighted avg": {
+    "precision": 0.46437476026083624,
+    "recall": 0.4620253164556962,
+    "f1-score": 0.45062053262869084,
+    "support": 158
+  },
+  "micro avg": {
+    "precision": 0.4620253164556962,
+    "recall": 0.4620253164556962,
+    "f1-score": 0.4620253164556962,
+    "support": 158
+  }
+}

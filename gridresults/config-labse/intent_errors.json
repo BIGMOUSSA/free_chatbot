@@ -1,0 +1,130 @@
+[
+  {
+    "text": "quel est le taux de croissance en 2022",
+    "intent": "NLG",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9966957569122314
+    }
+  },
+  {
+    "text": "fait moi un résumé de l'EDS",
+    "intent": "NLG",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9999997615814209
+    }
+  },
+  {
+    "text": "fait moi un résumé du RGE",
+    "intent": "NLG",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9999997615814209
+    }
+  },
+  {
+    "text": "je veux le résumé du rapport trimestiel",
+    "intent": "NLG",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "donne moi les informations clés de l'enquête sur l'emploi",
+    "intent": "NLG",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "salut",
+    "intent": "chitchat",
+    "intent_prediction": {
+      "name": "salutation",
+      "confidence": 0.9905626773834229
+    }
+  },
+  {
+    "text": "comment vas-tu",
+    "intent": "chitchat",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.6392304301261902
+    }
+  },
+  {
+    "text": "merci de votre aide, à plus",
+    "intent": "AuRevoir",
+    "intent_prediction": {
+      "name": "NLG",
+      "confidence": 0.9725551605224609
+    }
+  },
+  {
+    "text": "quel est le pib du sénégal",
+    "intent": "NLG",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.8899378180503845
+    }
+  },
+  {
+    "text": "je veux connaitre la population du Sénégal",
+    "intent": "NLG",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9776960611343384
+    }
+  },
+  {
+    "text": "quelle est la population de Dakar",
+    "intent": "NLG",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.6999682188034058
+    }
+  },
+  {
+    "text": "quels sont les défis en cours",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "NLG",
+      "confidence": 0.9553040266036987
+    }
+  },
+  {
+    "text": "cava",
+    "intent": "chitchat",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9635998606681824
+    }
+  },
+  {
+    "text": "toc toc",
+    "intent": "chitchat",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.5048447251319885
+    }
+  },
+  {
+    "text": "super",
+    "intent": "AuRevoir",
+    "intent_prediction": {
+      "name": "chitchat",
+      "confidence": 0.973494827747345
+    }
+  },
+  {
+    "text": "bonjour",
+    "intent": "salutation",
+    "intent_prediction": {
+      "name": "chitchat",
+      "confidence": 0.981886625289917
+    }
+  }
+]
