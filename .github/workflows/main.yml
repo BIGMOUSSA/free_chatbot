@@ -27,13 +27,16 @@ jobs:
           python-version: 3.10.9  # Replace '3.x' with your Python version
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
-        
+        run: |
+         pip3 install 'rasa[spacy]'
+         python3 -m spacy download fr_core_web_md
+         pip3 install transformers
+         pip3 install --upgrade rasa
 
-      - name: Use Node.js 16
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20'  # Explicitly specify Node.js 16
+      #- name: Use Node.js 16
+       # uses: actions/setup-node@v3
+        #with:
+         # node-version: '20'  # Explicitly specify Node.js 16
     
       - name: create output folder
         run: mkdir -p gridresults
