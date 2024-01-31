@@ -1,6 +1,30 @@
-#### This file contains tests to evaluate that your bot behaves as expected.
-#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+stories:
+- story: cherche à télécharger une publication
+  steps:
+  - user: |
+      bonjour
+    intent: salutation
+  - action: utter_chitchat
+  - user: |
+      je voudrais consulter le dernier rapport sur l'indice du chiffre d'affaires
+    intent: faq
+  - action: utter_faq
+  - user: |
+      super 
+    intent: AuRevoir
+  - action: utter_chitchat
 
-
-  - action: utter_goodbye
-
+- story: parle moi de la situation économique du pays
+  steps:
+  - user: |
+      salut
+    intent: salutation
+  - action: utter_chitchat
+  - user: |
+      parle moi de la situation économique du pays
+    intent: NLG
+  - action: action_nlg
+  - user: |
+      merci de votre aide, à plus
+    intent: AuRevoir
+  - action : utter_chitchat

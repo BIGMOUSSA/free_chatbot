@@ -1,0 +1,24 @@
+recipe: default.v1
+
+language: fr
+pipeline:
+- name: SpacyNLP
+  model: fr_core_news_md
+- name: SpacyTokenizer
+- name: SpacyFeaturizer
+  pooling: mean
+- name: LexicalSyntacticFeaturizer
+- name: CountVectorsFeaturizer
+- name: CountVectorsFeaturizer
+  analyzer: char_wb
+  min_ngram: 1
+  max_ngram: 4
+- name: DIETClassifier
+  epochs: 200
+- name: SpacyEntityExtractor
+- name: ResponseSelector
+  epochs: 200
+  retrieval_intent: faq
+- name: ResponseSelector
+  epochs: 200
+  retrieval_intent: chitchat
