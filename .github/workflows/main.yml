@@ -29,9 +29,9 @@ jobs:
       - name: Install dependencies
         run: |
          pip3 install 'rasa[spacy]'
-         python3 -m spacy download fr_core_web_md
+         python3 -m spacy download fr_core_news_md
          pip3 install transformers
-         pip3 install --upgrade rasa
+        # pip3 install --upgrade rasa
 
       #- name: Use Node.js 16
        # uses: actions/setup-node@v3

@@ -3,7 +3,7 @@ recipe: default.v1
 language: fr
 pipeline:
 - name: SpacyNLP
-  model: fr_core_web_md
+  model: fr_core_news_md
 - name: SpacyTokenizer
 - name: SpacyFeaturizer
   pooling: mean
