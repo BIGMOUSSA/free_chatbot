@@ -17,8 +17,8 @@ pipeline:
   epochs: 200
 - name: SpacyEntityExtractor
 - name: ResponseSelector
-  epochs: 200
+  epochs: 100
   retrieval_intent: faq
 - name: ResponseSelector
-  epochs: 200
+  epochs: 100
   retrieval_intent: chitchat
