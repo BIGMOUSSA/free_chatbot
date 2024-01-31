@@ -54,9 +54,9 @@ jobs:
       #      --out gridresults/config-regex 
       - name: Run NLU with spacy
         run: |
-            rasa test nlu --config config/config-spacy.yml \
-            --cross-validation --runs 1 --folds 2 \
-            --out gridresults/config-spacy
+            rasa test nlu --config config/config_spacy_and_bert \
+            --cross-validation --runs 1  \
+            --out gridresults/config-spacy_bert
 
       - uses: actions/upload-artifact@v3
         with:
