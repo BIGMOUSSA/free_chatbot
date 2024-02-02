@@ -216,6 +216,9 @@ responses:
  - text: "Pour accéder aux publications sur la croissance démographique Veuillez consulter cette page :https://www.ansd.sn/theme/demographie"
 
 
+ utter_default:
+ - text: "I'm sorry, I didn't understand that. Can you please rephrase?"
+
 
  
 
