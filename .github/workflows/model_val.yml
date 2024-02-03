@@ -44,26 +44,26 @@ jobs:
       - name: Run NLU Tests with config_laBSE.yml
         run: | 
             rasa test nlu --config config/config_bert_camembert.yml \
-            --cross-validation --runs 1 --folds 1 \
+            --cross-validation --runs 1 --folds 2 \
             --out gridresults/config-bert_camb
         
       - name: Run NLU Tests with config-regex.yml
         run: |
             rasa test nlu --config config/config-regex.yml \
-            --cross-validation --runs 1 --folds 1 \
+            --cross-validation --runs 1 --folds 2 \
             --out gridresults/config-regex 
 
 
       - name: Run NLU Tests with spacy
         run: |
             rasa test nlu --config config/config_spacy.yml \
-            --cross-validation --runs 1 --folds 1 \
+            --cross-validation --runs 1 --folds 2 \
             --out gridresults/config-spacy
 
       - name: Run NLU with labase
         run: |
             rasa test nlu --config config/config_bert_labse.yml \
-            --cross-validation --runs 1 --folds 1 \
+            --cross-validation --runs 1 --folds 2 \
             --out gridresults/config-labse
 
 
