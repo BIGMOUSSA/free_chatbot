@@ -8,6 +8,7 @@ pipeline:
 - name: SpacyFeaturizer
   pooling: mean
 - name: LexicalSyntacticFeaturizer
+- name: RegexFeaturizer
 - name: CountVectorsFeaturizer
 - name: CountVectorsFeaturizer
   analyzer: char_wb
