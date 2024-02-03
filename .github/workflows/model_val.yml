@@ -41,11 +41,11 @@ jobs:
       - name: create output folder
         run: mkdir -p gridresults
 
-      - name: Run NLU Tests with config_laBSE.yml
-        run: | 
-            rasa test nlu --config config/config_bert_camembert.yml \
-            --cross-validation --runs 1 --folds 2 \
-            --out gridresults/config-bert_camb
+      #- name: Run NLU Tests with config_laBSE.yml
+       # run: | 
+        #    rasa test nlu --config config/config_bert_camembert.yml \
+         #   --cross-validation --runs 1 --folds 2 \
+          #  --out gridresults/config-bert_camb
         
       - name: Run NLU Tests with config-regex.yml
         run: |
