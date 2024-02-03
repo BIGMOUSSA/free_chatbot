@@ -1,19 +1,26 @@
-language: fr
+recipe: default.v1
 
+language: fr
 pipeline:
-- name: WhitespaceTokenizer
-- name: LanguageModelFeaturizer
-  model_name: bert
-  model_weights: "rasa/LaBSE"
-- name: "DIETClassifier"
-  epochs: 300
-  learning_rate: 0.01
-- name: EntitySynonymMapper
-- name: ResponseSelector
+- name: SpacyNLP
+  model: fr_core_news_md
+- name: SpacyTokenizer
+- name: SpacyFeaturizer
+  pooling: mean
+- name: LexicalSyntacticFeaturizer
+- name: CountVectorsFeaturizer
+- name: CountVectorsFeaturizer
+  analyzer: char_wb
+  min_ngram: 1
+  max_ngram: 4
+- name: DIETClassifier
   epochs: 200
+- name: SpacyEntityExtractor
+- name: ResponseSelector
+  epochs: 100
   retrieval_intent: faq
 - name: ResponseSelector
-  epochs: 200
+  epochs: 100
   retrieval_intent: chitchat
 - name: FallbackClassifier
   threshold: 0.7
@@ -36,6 +43,3 @@ policies:
   epochs: 100
   constrain_similarities: true
 assistant_id: 20240109-121537-express-pod
-# # No configuration for policies was provided. The following default policies were used to train your model.
-# # If you'd like to customize them, uncomment and adjust the policies.
-# # See https://rasa.com/docs/rasa/policies for more information.

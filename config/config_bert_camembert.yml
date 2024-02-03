@@ -4,7 +4,7 @@ pipeline:
 - name: WhitespaceTokenizer
 - name: LanguageModelFeaturizer
   model_name: bert
-  model_weights: "rasa/LaBSE"
+  model_weights: "camembert-base"
 - name: "DIETClassifier"
   epochs: 300
   learning_rate: 0.01
@@ -20,9 +20,6 @@ pipeline:
   ambiguity_threshold: 0.1
 
 policies: 
-# # No configuration for policies was provided. The following default policies were used to train your model.
-# # If you'd like to customize them, uncomment and adjust the policies.
-# # See https://rasa.com/docs/rasa/policies for more information.
 - name: MemoizationPolicy
 - name: RulePolicy
   core_fallback_threshold: 0.7

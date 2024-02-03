@@ -1,249 +1,212 @@
-version : '3.1'
+version : '3.0'
 
  
 
 intents:
-- statistique_emploi
-- MORTALITE
-- situation_economique_sociale_nationale
-- POPULATION
-- statistiques_Agriculture
-- enquetes_etude
-- statistiques_demographiques
-- statistiques_entreprise
-- ressources
-- synthese_economique
-- MIGRATION
-- societe
-- PRIX
-- Echange_EXTERIEUR
-- croissance_economique
-- NATALITE
-- situation_economique_sociale_regionale
-- salutation
+- NLG
+- faq
 - chitchat
-- Au_revoir
-- loc_ansd
-- recrutement
-- bot
-- apropos_ansd
-responses:
- utter_chitchat/salutation:
- - text: "Salut! Comment puis-je vous aider \n Vous pouvez demander à propos de l'ANSD \n Vous pouvez demander à propos du RGPH5"
- - text: "Comment vous allez ? \n Vous pouvez demander à propos de l'ANSD \n Vous pouvez demander à propos du RGPH5"
- - text: "Ravi de vous servir ! \n Vous pouvez demander à propos de l'ANSD \n Vous pouvez demander à propos du RGPH5"
 
- utter_chitchat/Au_revoir:
+ 
+
+responses:
+ utter_faq/ask_CroissanceEconomique :
+ - text: "Ce que vous cherchez semble se trouver dans cette [page](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=20)"
+ - text: "Ce [lien](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=20) vous ménera vers cette publication concernant 'CroissanceEconomique'"
+ - text: "pour les indicateurs concernant [CroissanceEconomique] veuillez suivre ce [lien](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=20)"
+ - text: "Merci de se rendre dans la rubrique : [CroissanceEconomique](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=20)"
+ - text: "Pour les indicateurs relatives à 'CroissanceEconomique', suivre ce [page](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=20)."
+
+
+ utter_faq/ask_LienSiteWeb :
+ - text: "voic le lien www.ansd.sn"
+ - text: "le site officiel de l'ANSD est www.ansd.sn"
+
+
+ utter_faq/ask_MORTALITE :
+ - text: "Ce que vous cherchez semble se trouver dans cette [page](https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=28)"
+ - text: "Ce [lien](https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=28) vous ménera vers cette publication concernant 'MORTALITE'"
+ - text: "pour les indicateurs concernant [MORTALITE] veuillez suivre ce [lien](https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=28)"
+ - text: "Merci de se rendre dans la rubrique : [MORTALITE](https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=28)"
+ - text: "Pour les indicateurs relatives à 'MORTALITE', suivre ce [page](https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=28)."
+
+
+ utter_faq/ask_POPULATION :
+ - text: "Ce que vous cherchez semble se trouver dans cette [page](https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=25)"
+ - text: "Ce [lien](https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=25) vous ménera vers cette publication concernant 'POPULATION'"
+ - text: "pour les indicateurs concernant [POPULATION] veuillez suivre ce [lien](https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=25)"
+ - text: "Merci de se rendre dans la rubrique : [POPULATION](https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=25)"
+ - text: "Pour les indicateurs relatives à 'POPULATION', suivre ce [page](https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=25)."
+
+
+ utter_faq/ask_attestation :
+ - text: "Si vous avez particpé au RGPH5 en tant que recenseur ou contrôleur, votre attestion devrait être téléchargeable sur ce [lien](https://recrutergph5.ansd.sn/),  \n si vous êtes superviseurs, veuillez contacter le CTD, CTR ou chef de service régional pour s'enquérir de la situation. \n Si vous avez participé à une autre enquête merci de se rapprocher au ressource humaines ou le service régional le plus proche."
+
+
+ utter_faq/ask_Recrutement :
+ - text: "le recrutements se fait via le platform https://recrute.ansd.sn"
+ - text: "Pour travailler à l'ANSD veuillez postuler sur https://recrute.ansd.sn"
+ - text: "L'ANSD recrute diverse profils, rendez-vous sur ce lien https://recrute.ansd.sn"
+
+
+ utter_faq/ask_Emploi :
+ - text: "Ce que vous cherchez semble se trouver dans cette [page](https://www.ansd.sn/theme/societe?field_type_indicateurs_target_id=31)"
+ - text: "Ce [lien](https://www.ansd.sn/theme/societe?field_type_indicateurs_target_id=31) vous ménera vers cette publication concernant 'Emploi'"
+ - text: "pour les indicateurs concernant [Emploi] veuillez suivre ce [lien](https://www.ansd.sn/theme/societe?field_type_indicateurs_target_id=31)"
+ - text: "Merci de se rendre dans la rubrique : [Emploi](https://www.ansd.sn/theme/societe?field_type_indicateurs_target_id=31)"
+ - text: "Pour les indicateurs relatives à 'Emploi', suivre ce [page](https://www.ansd.sn/theme/societe?field_type_indicateurs_target_id=31)."
+
+
+ utter_faq/ask_out_of_scope :
+ - text: "Désolé ceci n'est pas pris en compte dans cette application"
+ - text: "Ma mission se limite à vous fournir les informations statistiques produites par le système statistique national"
+ - text: "Désolé je ne peux pas répondre à cette question!"
+ - text: "Je ne couvre pas ces genres questions, désolé!"
+
+
+ utter_faq/ask_rgph :
+ - text: "Les données pré-éliminaire du recensement de 2023 sont disponible sur ce [site](https://resultats.ansd.sn/)"
+ - text: "Pour consulter les données publiées concernant le recensement de 2023, cliquez [ici](https://resultats.ansd.sn/)"
+
+
+ utter_faq/ask_MIGRATION :
+ - text: "Ce que vous cherchez semble se trouver dans cette [page](https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=30)"
+ - text: "Ce [lien](https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=30) vous ménera vers cette publication concernant 'MIGRATION'"
+ - text: "pour les indicateurs concernant [MIGRATION] veuillez suivre ce [lien](https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=30)"
+ - text: "Merci de se rendre dans la rubrique : [MIGRATION](https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=30)"
+ - text: "Pour les indicateurs relatives à 'MIGRATION', suivre ce [page](https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=30)."
+
+
+ utter_faq/ask_ses_nationale :
+ - text: "Ce que vous cherchez semble se trouver dans cette [page](https://www.ansd.sn/ses-nationales)"
+ - text: "Ce [lien](https://www.ansd.sn/ses-nationales) vous ménera vers cette publication concernant 'ses_nationale'"
+ - text: "pour les indicateurs concernant [ses_nationale] veuillez suivre ce [lien](https://www.ansd.sn/ses-nationales)"
+ - text: "Merci de se rendre dans la rubrique : [ses_nationale](https://www.ansd.sn/ses-nationales)"
+ - text: "Pour les indicateurs relatives à 'ses_nationale', suivre ce [page](https://www.ansd.sn/ses-nationales)."
+
+
+ utter_faq/ask_Localisation :
+ - text: " L'ANSD se trouve à Rocade Fann Bel-air Cerf-volant BP 116 Dakar"
+ - text: " Rocade Fann Bel-air Cerf-volant BP 116 Dakar Rocade Fan Bel AIR '"
+
+
+ utter_faq/ask_statistiquesEntreprises :
+ - text: "Ce que vous cherchez semble se trouver dans cette [page](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=23)"
+ - text: "Ce [lien](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=23) vous ménera vers cette publication concernant 'statistiquesEntreprises'"
+ - text: "pour les indicateurs concernant [statistiquesEntreprises] veuillez suivre ce [lien](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=23)"
+ - text: "Merci de se rendre dans la rubrique : [statistiquesEntreprises](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=23)"
+ - text: "Pour les indicateurs relatives à 'statistiquesEntreprises', suivre ce [page](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=23)."
+
+
+ utter_chitchat/ask_salutation :
+ - text: "Salut! Comment puis-je vous aider \n je peux vous aider à retrouver une publication ou rapport\n je répond aussi aux questionx sur le contenu des publications"
+ - text: "Comment vous allez ? \n je peux vous aider à retrouver une publication ou rapport\n je répond aussi aux questions sur le contenu des publications"
+ - text: "Ravi de vous servir !\n je peux vous aider à retrouver une publication ou rapport\n je répond aussi aux questions sur le contenu des publications"
+
+
+ utter_faq/ask_société :
+ - text: "Ce que vous cherchez semble se trouver dans cette [page](https://www.ansd.sn/theme/societe)"
+ - text: "Ce [lien](https://www.ansd.sn/theme/societe) vous ménera vers cette publication concernant 'société'"
+ - text: "pour les indicateurs concernant [société] veuillez suivre ce [lien](https://www.ansd.sn/theme/societe)"
+ - text: "Merci de se rendre dans la rubrique : [société](https://www.ansd.sn/theme/societe)"
+ - text: "Pour les indicateurs relatives à 'société', suivre ce [page](https://www.ansd.sn/theme/societe)."
+
+
+ utter_faq/ask_ressources :
+ - text: "Ce que vous cherchez semble se trouver dans cette [page](https://www.ansd.sn/ressources)"
+ - text: "Ce [lien](https://www.ansd.sn/ressources) vous ménera vers cette publication concernant 'ressources'"
+ - text: "pour les indicateurs concernant [ressources] veuillez suivre ce [lien](https://www.ansd.sn/ressources)"
+ - text: "Merci de se rendre dans la rubrique : [ressources](https://www.ansd.sn/ressources)"
+ - text: "Pour les indicateurs relatives à 'ressources', suivre ce [page](https://www.ansd.sn/ressources)."
+
+
+ utter_chitchat/ask_AuRevoir :
  - text: Bye
  - text: A la prochaine !
- - text: Ravi de vous servir !
+ - text: Ravi de vous servir 
 
- utter_faq/loc_ansd:
- - text: L'ANSD se trouve à Rocade Fann Bel-air Cerf-volant BP 116 Dakar
- - text: ' Rocade Fann Bel-air Cerf-volant BP 116 Dakar Rocade Fan Bel AIR '
- - text: ' A côté de la Mosquée Majalikoun Djinane , prés de OMVS '
 
- utter_chitchat/bot:
+ utter_faq/ask_AproposANSD :
+ - text: "Pour avoir les informations sur l'histoire de l'ANSD, la liste des Directions, l'organigramme etc. merci de rendre [ici](https://www.ansd.sn/propos/lansd/presentation-generale)"
+
+
+ utter_faq/ask_SynthèseEconomique :
+ - text: "Ce que vous cherchez semble se trouver dans cette [page](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=24)"
+ - text: "Ce [lien](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=24) vous ménera vers cette publication concernant 'SynthèseEconomique'"
+ - text: "pour les indicateurs concernant [SynthèseEconomique] veuillez suivre ce [lien](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=24)"
+ - text: "Merci de se rendre dans la rubrique : [SynthèseEconomique](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=24)"
+ - text: "Pour les indicateurs relatives à 'SynthèseEconomique', suivre ce [page](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=24)."
+
+
+ utter_faq/ask_Agriculture :
+ - text: "Ce que vous cherchez semble se trouver dans cette [page](https://www.ansd.sn/theme/autres-statistiques?field_type_indicateurs_target_id=41)"
+ - text: "Ce [lien](https://www.ansd.sn/theme/autres-statistiques?field_type_indicateurs_target_id=41) vous ménera vers cette publication concernant 'Agriculture'"
+ - text: "pour les indicateurs concernant [Agriculture] veuillez suivre ce [lien](https://www.ansd.sn/theme/autres-statistiques?field_type_indicateurs_target_id=41)"
+ - text: "Merci de se rendre dans la rubrique : [Agriculture](https://www.ansd.sn/theme/autres-statistiques?field_type_indicateurs_target_id=41)"
+ - text: "Pour les indicateurs relatives à 'Agriculture', suivre ce [page](https://www.ansd.sn/theme/autres-statistiques?field_type_indicateurs_target_id=41)."
+
+
+ utter_faq/ask_EchangeEXTERIEUR :
+ - text: "Ce que vous cherchez semble se trouver dans cette [page](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=22)"
+ - text: "Ce [lien](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=22) vous ménera vers cette publication concernant 'EchangeEXTERIEUR'"
+ - text: "pour les indicateurs concernant [EchangeEXTERIEUR] veuillez suivre ce [lien](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=22)"
+ - text: "Merci de se rendre dans la rubrique : [EchangeEXTERIEUR](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=22)"
+ - text: "Pour les indicateurs relatives à 'EchangeEXTERIEUR', suivre ce [page](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=22)."
+
+
+ utter_faq/ask_EnquêtesEtude :
+ - text: "Ce que vous cherchez semble se trouver dans cette [page](https://www.ansd.sn/enquete)"
+ - text: "Ce [lien](https://www.ansd.sn/enquete) vous ménera vers cette publication concernant 'EnquêtesEtude'"
+ - text: "pour les indicateurs concernant [EnquêtesEtude] veuillez suivre ce [lien](https://www.ansd.sn/enquete)"
+ - text: "Merci de se rendre dans la rubrique : [EnquêtesEtude](https://www.ansd.sn/enquete)"
+ - text: "Pour les indicateurs relatives à 'EnquêtesEtude', suivre ce [page](https://www.ansd.sn/enquete)."
+
+
+ utter_faq/ask_Démographie :
+ - text: "Ce que vous cherchez semble se trouver dans cette [page](https://www.ansd.sn/theme/demographie)"
+ - text: "Ce [lien](https://www.ansd.sn/theme/demographie) vous ménera vers cette publication concernant 'Démographie'"
+ - text: "pour les indicateurs concernant [Démographie] veuillez suivre ce [lien](https://www.ansd.sn/theme/demographie)"
+ - text: "Merci de se rendre dans la rubrique : [Démographie](https://www.ansd.sn/theme/demographie)"
+
+
+ utter_NLG:
+ - text: L'API sera disponible bientôt
+ utter_faq/ask_ses_regionale :
+ - text: "Ce que vous cherchez semble se trouver dans cette [page](https://www.ansd.sn/ses-regionales)"
+ - text: "Ce [lien](https://www.ansd.sn/ses-regionales) vous ménera vers cette publication concernant 'ses_regionale'"
+ - text: "pour les indicateurs concernant [ses_regionale] veuillez suivre ce [lien](https://www.ansd.sn/ses-regionales)"
+ - text: "Merci de se rendre dans la rubrique : [ses_regionale](https://www.ansd.sn/ses-regionales)"
+ - text: "Pour les indicateurs relatives à 'ses_regionale', suivre ce [page](https://www.ansd.sn/ses-regionales)."
+
+
+ utter_faq/ask_NATALITE :
+ - text: "Ce que vous cherchez semble se trouver dans cette [page](https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=26)"
+ - text: "Ce [lien](https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=26) vous ménera vers cette publication concernant 'NATALITE'"
+ - text: "pour les indicateurs concernant [NATALITE] veuillez suivre ce [lien]()"
+ - text: "Merci de se rendre dans la rubrique : [NATALITE](https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=26)"
+ - text: "Pour les indicateurs relatives à 'NATALITE', suivre ce [page](https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=26)."
+
+
+ utter_faq/ask_PRIX :
+ - text: "Ce que vous cherchez semble se trouver dans cette [page](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=21)"
+ - text: "Ce [lien](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=21) vous ménera vers cette publication concernant 'PRIX'"
+ - text: "pour les indicateurs concernant [PRIX] veuillez suivre ce [lien](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=21)"
+ - text: "Merci de se rendre dans la rubrique : [PRIX](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=21)"
+ - text: "Pour les indicateurs relatives à 'PRIX', suivre ce [page](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=21)."
+ - text: "Ce que vous cherchez semble se trouver dans cette [page](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=21)"
+ - text: "Ce [lien](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=21) vous ménera vers cette publication concernant 'PRIX'"
+ - text: "pour les indicateurs concernant [PRIX] veuillez suivre ce [lien](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=21)"
+ - text: "Merci de se rendre dans la rubrique : [PRIX](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=21)"
+ - text: "Pour les indicateurs relatives à 'PRIX', suivre ce [page](https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=21)."
+
+
+ utter_chitchat/ask_bot :
  - text: Appel moi stat_bot, je suis votre assistant 
  - text: Je suis programmé pour vous aider 
 
- utter_faq/apropos_ansd:
- - text: L'Agence nationale de la statistique et de la démographie est le pilier du système statistique national cf www.ansd.sn
- - text: ANSD signifie Agence Nationale de la Statistique et de la Démographie, pour plus d'information allez vers le site web www.ansd.sn
 
- utter_faq/internet_link:
- - text: Le site officiel de l'ANSD c'est www.ansd.sn ; pour le recrutement c'est https://recrute.ansd.sn 
-
-
- utter_faq/recrutement:
- - text: le recrutements se fait via le platform https://recrute.ansd.sn
- - text: Pour travailler à l'ANSD veuillez postuler sur https://recrute.ansd.sn
- - text: L'ANSD recrute diverse profils, rendez-vous sur ce lien https://recrute.ansd.sn
-
- utter_faq/statistique_emploi :
- - text: "Vous trouverez les données de la rubrique statistique_emploi à cette adresse: https://www.ansd.sn/theme/societe?field_type_indicateurs_target_id=31."
- - text: "Les statistiques de l'emploi se trouvent sur cette page : https://www.ansd.sn/theme/societe?field_type_indicateurs_target_id=31."
- - text: "La réponse à votre question sur les statistiques de l'emploi se trouve sur cette page : https://www.ansd.sn/theme/societe?field_type_indicateurs_target_id=31."
- - text: "Vous trouverez les informations que vous recherchez sur la page https://www.ansd.sn/theme/societe?field_type_indicateurs_target_id=31 dans la rubrique statistique_emploi."
- - text: "Les statistiques de l'emploi sont disponibles sur cette page : https://www.ansd.sn/theme/societe?field_type_indicateurs_target_id=31"
- - text: "La rubrique statistique_emploi se trouve à cette page : https://www.ansd.sn/theme/societe?field_type_indicateurs_target_id=31"
- - text: "Vous trouverez les informations que vous recherchez sur la page https://www.ansd.sn/theme/societe?field_type_indicateurs_target_id=31, dans la rubrique Statistique_Emploi."
-
-
- utter_faq/MORTALITE :
- - text: "Vous trouverez les informations sur la mortalité sur cette page: https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=28 ."
- - text: "La réponse à votre question sur la mortalité se trouve sur cette page : https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=28."
- - text: "La rubrique MORTALITE est traitée dans la page suivante : https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=28."
- - text: "Vous trouverez les informations concernant la mortalité sur la page suivante: https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=28 ."
- - text: "La rubrique MORTALITE se trouve sur cette page : https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=28"
-
-
- utter_faq/situation_economique_sociale_nationale :
- - text: "Vous trouverez les données sur la situation économique et sociale nationale du Sénégal sur cette page : https://www.ansd.sn/ses-nationales."
- - text: "Les informations sur la situation économique et sociale nationale sont disponibles sur cette page: https://www.ansd.sn/ses-nationales."
- - text: "Les données concernant la situation_économique_sociale_nationale se trouvent sur cette page : https://www.ansd.sn/ses-nationales."
- - text: "La situation économique et sociale nationale du Sénégal se trouve sur la page https://www.ansd.sn/ses-nationales."
- - text: "Vous trouverez les informations sur la situation économique et sociale nationale dans cette page : https://www.ansd.sn/ses-nationales"
-
-
- utter_faq/POPULATION :
- - text: "Vous trouverez des informations sur la population sénégalaise sur cette page : https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=25."
- - text: "Consultez la rubrique POPULATION sur cette page : https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=25 pour plus d'informations."
- - text: "La réponse à votre question sur la population du Sénégal se trouve sur cette page : https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=25"
- - text: "La rubrique POPULATION se trouve sur cette page : https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=25."
- - text: "La rubrique POPULATION se trouve sur cette page : https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=25"
-
-
- utter_faq/statistiques_Agriculture :
- - text: "La rubrique statistiques_Agriculture se trouve sur cette page: https://www.ansd.sn/theme/autres-statistiques?field_type_indicateurs_target_id=41."
- - text: "Vous trouverez la réponse à votre question sur les statistiques de l'agriculture sur cette page : https://www.ansd.sn/theme/autres-statistiques?field_type_indicateurs_target_id=41"
- - text: "Les statistiques sur l'Agriculture se trouvent sur cette page : https://www.ansd.sn/theme/autres-statistiques?field_type_indicateurs_target_id=41"
- - text: "Les statistiques sur l'agriculture se trouvent sur cette page : https://www.ansd.sn/theme/autres-statistiques?field_type_indicateurs_target_id=41 ."
- - text: "Vous trouverez les statistiques d'Agriculture sur cette page : https://www.ansd.sn/theme/autres-statistiques?field_type_indicateurs_target_id=41 ."
- - text: "Vous pouvez consulter cette rubrique [Statistiques sur l'agriculture](https://www.ansd.sn/theme/autres-statistiques?field_type_indicateurs_target_id=41) qui se trouve sur cette page."
- - text: "Les statistiques sur l'agriculture sont disponibles sur cette page : https://www.ansd.sn/theme/autres-statistiques?field_type_indicateurs_target_id=41"
- - text: "Les statistiques sur l'agriculture peuvent être consultées dans la page https://www.ansd.sn/theme/autres-statistiques?field_type_indicateurs_target_id=41."
-
-
- utter_faq/enquetes_etude :
- - text: "La rubrique enquêtes_étude se trouve sur cette page https://www.ansd.sn/enquete."
- - text: "Vous trouverez les informations que vous cherchez dans la rubrique Enquêtes et Études sur cette page : https://www.ansd.sn/enquete."
- - text: "Les informations que vous recherchez sur les enquêtes et études menées par l'Agence nationale de la statistique et de la démographie (ANSD) se trouvent sur cette page : https://www.ansd.sn/enquete."
- - text: "La rubrique enquêtes_étude se trouve sur cette page : https://www.ansd.sn/enquete."
- - text: "Vous trouverez les informations que vous cherchez dans la rubrique enquêtes_étude sur cette page : https://www.ansd.sn/enquete."
-
-
- utter_faq/statistiques_demographiques :
- - text: "Vous trouverez les statistiques démographiques sur cette page : https://www.ansd.sn/theme/demographie."
- - text: "La réponse à votre question concernant les statistiques démographiques se trouve sur cette page : https://www.ansd.sn/theme/demographie"
- - text: "Vous trouverez votre réponse sur cette page : https://www.ansd.sn/theme/demographie"
- - text: "Vous trouverez les statistiques démographiques sur cette page : https://www.ansd.sn/theme/demographie."
-
-
- utter_faq/statistiques_entreprise :
- - text: "Vous trouverez les informations que vous cherchez sur les statistiques de l'entreprise sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=23"
- - text: "Les statistiques d'entreprise se trouvent sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=23 ."
- - text: "La réponse à votre question sur les statistiques d'entreprise se trouve dans cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=23."
- - text: "La page https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=23 contient les statistiques_entreprise que vous recherchez."
- - text: "Vous trouverez les statistiques d'entreprise sur la page https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=23."
- - text: "Les statistiques sur les entreprises se trouvent sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=23."
- - text: "Les statistiques sur les entreprises se trouvent sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=23."
- - text: "Les statistiques relatives à l’entreprise peuvent être consultées sur la page https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=23."
- - text: "Les statistiques recherchées se trouvent sur cette page: https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=23."
- - text: "Vous trouverez les statistiques d'entreprise sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=23."
- - text: "La rubrique statistiques_entreprise est traitée dans cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=23."
- - text: "Les statistiques de l'entreprise se trouvent sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=23."
- - text: "Les statistiques relatives à votre entreprise se trouvent sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=23."
-
-
- utter_faq/ressources :
- - text: "Vous trouverez la réponse à votre question sur les ressources dans cette page: https://www.ansd.sn/ressources."
- - text: "Vous trouverez les ressources que vous recherchez sur cette page : https://www.ansd.sn/ressources."
- - text: "La réponse à votre question se trouve sur cette page : https://www.ansd.sn/ressources."
- - text: "La réponse à votre question se trouve sur cette page : https://www.ansd.sn/ressources"
- - text: "Les ressources dont vous avez besoin se trouvent dans la rubrique Ressources de l'ANSD sur cette page :
-https://www.ansd.sn/ressources."
-
-
- utter_faq/synthese_economique :
- - text: "La synthèse économique se trouve sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=24."
- - text: "La synthèse économique se trouve sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=24"
- - text: "Les informations que vous recherchez sur la synthèse économique sont disponibles sur cette page :
-
-https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=24"
- - text: "La synthèse économique se trouve sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=24."
- - text: "Bien sûr, voici une phrase pour indiquer à l'utilisateur que la réponse se trouve dans la page :
-
-La synthèse économique mise à jour le 30 août 2022 se trouve sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=24."
- - text: "Vous trouverez la rubrique synthèse économique sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=24."
- - text: "Vous trouverez  des informations détaillées sur la synthèse économique dans cette page: https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=24."
- - text: "La page https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=24 contient la synthèse économique que vous recherchez."
- - text: "La page https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=24 contient la synthèse économique que vous recherchez."
- - text: "Les informations concernant la synthèse économique sont disponibles sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=24"
- - text: "Veuillez consulter la page suivante pour obtenir votre réponse à propos de la synthèse économique: https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=24."
- - text: "La synthèse économique peut être consultée sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=24."
- - text: "La synthèse économique se trouve dans cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=24."
- - text: "La synthèse économique se trouve sur cette page: https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=24."
- - text: "La synthèse économique se trouve sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=24."
-
-
- utter_faq/MIGRATION :
- - text: "Vous trouverez les informations concernant MIGRATION sur : https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=30."
- - text: "La réponse à votre question sur la Migration se trouve sur cette page : https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=30."
- - text: "La rubrique Migration est traitée dans cette page : https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=30"
- - text: "La réponse à votre question sur la migration se trouve dans la page intitulée Démographie sur le site de l'ANSD : https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=30."
- - text: "La réponse à votre question sur la migration se trouve dans cette page : https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=30."
- - text: "Vous trouverez la réponse à votre question sur la migration dans cette page : https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=30."
- - text: "La réponse à votre question sur la migration se trouve sur cette page : https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=30."
-
-
- utter_faq/societe :
- - text: "Vous trouverez la réponse à votre question sur la société sur cette page: https://www.ansd.sn/theme/societe."
- - text: "Les informations que vous recherchez sur la société se trouvent sur cette page : https://www.ansd.sn/theme/societe ."
- - text: "Vous trouverez les informations sur la société sur cette page : https://www.ansd.sn/theme/societe"
- - text: "Vous trouverez des informations pertinentes concernant la société sénégalaise à l'adresse suivante : https://www.ansd.sn/theme/societe."
- - text: "La réponse à votre question se trouve dans cette page: https://www.ansd.sn/theme/societe."
-
-
- utter_faq/PRIX :
- - text: "Pour consulter les informations sur les prix, veuillez vous rendre sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=21"
- - text: "La section des prix se trouve sur cette page: https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=21."
- - text: "La réponse à votre question sur les prix se trouve sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=21."
- - text: "La politique de prix se trouve sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=21"
- - text: "Vous pouvez trouver des informations sur les prix dans cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=21 ."
- - text: "Les prix se trouvent sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=21"
- - text: "La rubrique PRIX se trouve sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=21"
- - text: "Vous trouverez les informations relatives aux prix sur ce lien: https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=21."
- - text: "La réponse à votre question sur les prix se trouve dans la page suivante : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=21."
- - text: "Les Prix sont traités dans cette page: https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=21"
-
-
- utter_faq/Echange_EXTERIEUR :
- - text: "Vous trouverez les informations concernant l'Echange_EXTERIEUR sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=22."
- - text: "Vous trouverez les informations relatives à la rubrique Échange_EXTERIEUR sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=22"
- - text: "La réponse à votre question sur les échanges extérieurs se trouve sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=22"
- - text: "Les informations concernant la rubrique Echange_EXTERIEUR sont disponibles sur la page suivante : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=22."
- - text: "Vous trouverez la réponse à votre question sur les échanges extérieurs dans cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=22"
- - text: "Bien sûr, En matière d'Echange_EXTERIEUR, la page https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=22 peut vous être utile."
- - text: "La réponse à votre question sur l'échange extérieur se trouve dans cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=22."
- - text: "La réponse à votre question sur les échanges extérieurs se trouve dans cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=22."
- - text: "La réponse à votre question se trouve dans la page Échange_EXTERIEUR sur ce lien : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=22."
-
-
- utter_faq/croissance_economique :
- - text: "La rubrique **croissance_économique** est disponible sur cette page : {https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=20}."
- - text: "La réponse à votre question sur la croissance économique se trouve dans cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=20."
- - text: "La croissance économique peut être consultée à cette adresse : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=20"
- - text: "La réponse à votre question sur la croissance économique se trouve dans cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=20."
- - text: "La réponse à votre question sur la croissance économique se trouve sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=20 ."
- - text: "La réponse à votre question sur la croissance économique se trouve sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=20"
- - text: "Vous trouverez la rubrique croissance_économique sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=20."
- - text: "La réponse à votre question sur la croissance économique se trouve dans cette page: https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=20"
- - text: "Vous trouverez des informations sur la croissance économique sur cette page : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=20."
- - text: "Vous trouverez les informations concernant la croissance économique en consultant cette page web : https://www.ansd.sn/theme/economie?field_type_indicateurs_target_id=20"
-
-
- utter_faq/NATALITE :
- - text: "Les informations sur la natalité sont disponibles sur cette page : https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=26."
- - text: "Vous pouvez trouver les informations que vous cherchez sur la natalité sur cette page : https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=26."
- - text: "Je suis désolé, mais il n'y a pas d'informations sur le sujet NATALITE dans cette page."
- - text: "La réponse à votre question sur la natalité se trouve sur cette page : https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=26."
- - text: "La rubrique NATALITE est abordée dans la page suivante : https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=26"
- - text: "La réponse à votre question sur la natalité se trouve dans cette page : https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=26"
- - text: "Vous pouvez trouver les informations sur la natalité sur cette page: https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=26"
- - text: "Les informations sur la natalité se trouvent dans cette page: https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=26"
- - text: "Vous trouverez des informations sur la natalité au Sénégal sur cette page : https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=26."
- - text: "La réponse à votre question sur la natalité se trouve sur cette page : https://www.ansd.sn/theme/demographie?field_type_indicateurs_target_id=26 ."
-
-
- utter_faq/situation_economique_sociale_regionale :
- - text: "La situation économique et sociale régionale se trouve sur cette page: https://www.ansd.sn/ses-regionales"
- - text: "Les informations sur la situation économique et sociale régionale sont accessibles sur cette page : https://www.ansd.sn/ses-regionales."
- - text: "Vous trouverez les informations que vous recherchez sur la situation économique et sociale régionale dans cette page : https://www.ansd.sn/ses-regionales"
- - text: "Vous trouverez la réponse à votre question sur la situation économique et sociale régionale sur cette page: https://www.ansd.sn/ses-regionales."
- - text: "La situation économique et sociale régionale vous concerne ? Cliquez sur ce lien : https://www.ansd.sn/ses-regionales"
-
-
+utter_default:
+ - text : Désolé, je ne comprend pas votre requête. Pourriez-vous reformuler svp!
 
  
 
@@ -251,7 +214,9 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 actions:
-- utter_chitchat
-- utter_faq
+ - utter_chitchat
+ - utter_faq
+ - action_default_fallback
+ - action_nlg
 entities:
-- Au_revoir
+ - région
