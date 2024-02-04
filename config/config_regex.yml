@@ -12,6 +12,7 @@ pipeline:
 - name: DIETClassifier
   epochs: 300
   ranking_length: 5
+  constrain_similarities: True
 
 - name: EntitySynonymMapper
 

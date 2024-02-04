@@ -7,7 +7,8 @@ nlu:
     - Dakar
     - Kaolack
     - Matam
-    - ZiguinchorSédhiou
+    - Ziguinchor
+    - Sédhiou
     - Kolda
     - Thiès
     - Saint-Louis
@@ -94,7 +95,7 @@ nlu:
     - Où puis-je trouver la publication sur l'Indice Harmonisé de la Production Industrielle
     - donne moi le lien pour consulter  l'IHPI
     - Quels sont les résultats clés du Recensement Général des Entreprises (RGE) en 2016?
-    - Où puis-je trouver le rapport global du Recensement Général des Entreprises (RGE) 
+    - Où se trouve le rapport global du Recensement Général des Entreprises (RGE) 
     - je souhaite consulter la répartions des entreprises à [Dakar](région) ?
     - je souhaite connaitre l'évolution des entreprises
     - Pourriez-vous me guider vers les détails sur la structure juridique des entreprises selon le RGE 2016?
@@ -171,7 +172,7 @@ nlu:
     - je veux télécharger le dernier bulletin mensuel statistiques
     - je cherche le bulletin des statistiques économiques
     - Quel lien mène vers le bulletin économique?
-    - bulletin mensuel 
+    - où se trouve le bulletin mensuel 
     - Où puis-je trouver la dernière Note sur l'Évolution Économique Récente (NEER) du Sénégal?
     - je souhaite télécharger le NEER
     - Dirige moi vers les publications concernant la NEER?
@@ -200,7 +201,7 @@ nlu:
     - cherche indice du coût de la construction
     - cherche le dernier IMC
     - je cherche à avoir l'indice harmonisé des prix à la consommation
-    - où consulter le dernier IPPI
+    - où se trouve le dernier IPPI
     - je cherche à télécharger le dernier IPPS
     - où puis-je trouver l'IHPC
     - où consulter l'Indice des prix à  la production industriel
@@ -226,7 +227,7 @@ nlu:
     - où consulter le taux de croissance économique en 2022
     - je veux accéder aux tableaux sur les comptes nationaux
     - où consulter les comptes des secteurs institutionnels
-    - où consulter les tableaux des économies intégrées
+    - où se trouve les tableaux des économies intégrées
 - intent: faq/ask_ressources
   examples: |
     - où trouver les méthodes utilisées dans les enquêtes
@@ -265,7 +266,7 @@ nlu:
     - où trouver des données sur l'import-export?
     - Pouvez-vous me fournir des informations récentes sur les statistiques du commerce extérieur?
     - je veux télécharge le bulletin mensuel des statistiques du commerce extérieur
-    - je veux consulter la NACE
+    - où se trouve la NACE
     - où consulter la dernière note d'analyse du commerce extérieur
     - dans quel rubrique se trouve le bulletin mensuel des prix du commerce extérieur
 - intent: faq/ask_MORTALITE

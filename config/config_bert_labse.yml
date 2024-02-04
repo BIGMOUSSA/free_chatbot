@@ -9,6 +9,8 @@ pipeline:
 - name: "DIETClassifier"
   epochs: 300
   learning_rate: 0.001
+  constrain_similarities: True
+
 - name: RegexFeaturizer
 - name: EntitySynonymMapper
 - name: ResponseSelector
