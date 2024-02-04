@@ -1,3 +1,4 @@
+recipe: default.v1
 language: fr
 pipeline:
 - name: WhitespaceTokenizer
@@ -6,10 +7,10 @@ pipeline:
 - name: CountVectorsFeaturizer
 - name: CountVectorsFeaturizer
   analyzer: char_wb
-  min_ngram: 3
+  min_ngram: 1
   max_ngram: 6
 - name: DIETClassifier
-  epochs: 200
+  epochs: 300
   ranking_length: 5
 
 - name: EntitySynonymMapper
@@ -17,11 +18,11 @@ pipeline:
 - name: ResponseSelector
   retrieval_intent: faq
   scale_loss: false
-  epochs: 200
+  epochs: 300
 - name: ResponseSelector
   retrieval_intent: chitchat
   scale_loss: false
-  epochs: 200
+  epochs: 300
 - name: FallbackClassifier
   threshold: 0.7
 
@@ -33,10 +34,10 @@ policies:
   core_fallback_action_name: "action_default_fallback"
   enable_fallback_prediction: True
 - name: UnexpecTEDIntentPolicy
-  max_history: 5
+  max_history: 6
   epochs: 100
 - name: TEDPolicy
-  max_history: 5
+  max_history: 6
   epochs: 100
   constrain_similarities: true
 assistant_id: 20240109-121537-express-pod
