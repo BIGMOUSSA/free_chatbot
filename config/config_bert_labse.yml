@@ -8,7 +8,7 @@ pipeline:
   model_weights: "rasa/LaBSE"
 - name: "DIETClassifier"
   epochs: 200
-  learning_rate: 0.01
+  learning_rate: 0.001
   constrain_similarities: True
 
 - name: RegexFeaturizer

@@ -276,16 +276,6 @@ nlu:
     - Pouvez-vous me diriger vers les rapports spécifiques de l'ANSD sur la mortalité au Sénégal?
     - quelles publications traitent de la mortalité juvenile?
     - oriente moi vers  publications sur la mortalité, y compris des données détaillées par tranche d'âge et par région?
-- intent: faq/ask_Démographie
-  examples: |
-    - je cherche des données sur la population du Sénégal.
-    - je cherche des données sur la population de Lougua
-    - je veux consulter la pyramide des âges.
-    - nan
-    - Où puis-je trouver les statistiques sur la démographie du Sénégal?
-    - dans quelle rubrique je peux consulter la population totale du Sénégal ?
-    - Pouvez-vous me diriger vers les publications qui présentent des données démographiques  
-    - indique moi où trouver des informations sur la croissance démographique?
 - intent: faq/ask_out_of_scope
   examples: |
     - 1+1
@@ -331,6 +321,17 @@ nlu:
     - je souhaite disposer des informations détaillées sur la pyramide des âges de la population sénégalaise?
     - je veux consulter les tendances  en matière de croissance démographique au Sénégal?
     - Où puis-je accéder à des données sur la composition ethnique de la population sénégalaise?
+    - je cherche des données sur la population du Sénégal.
+    - je cherche des données sur la population de Lougua
+    - où trouver les rapports sur la démographie
+    - cherche études relatives à la démographie
+    - guide moi vers les publications relative à la démographie
+    - quel lien mène aux rapport concernant la démographie
+    - je veux faire des recherches sur les phénomènes démographique de ma région
+    - Où puis-je trouver les statistiques sur la population du Sénégal?
+    - dans quelle rubrique je peux consulter la population totale du Sénégal ?
+    - Pouvez-vous me diriger vers les publications qui présentent des données sur la population 
+    - indique moi où trouver des informations sur la croissance démographique?
 - intent: faq/ask_NATALITE
   examples: |
     - Où trouver les informations sur la natalité par région?
