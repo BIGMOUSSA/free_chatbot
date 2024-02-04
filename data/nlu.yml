@@ -16,6 +16,45 @@ nlu:
     - Kédouguou
     - Tambacounda
     - Fatick
+- synonym: Sénégal
+  examples: |
+    - senegal
+    - galsene
+    - SN
+    - sénégal
+    - SENEGAL
+- synonym: PIB
+  examples: |
+    - pib
+    - P.I.B
+    - Produit intérieur brut
+    - produit interieur brut
+- synonym: ANSD
+  examples: |
+    - ansd
+    - A.N.S.D
+    - ands
+    - Agence Nationale de la Statistique et de la Démgoraphie
+    - a.n.s.d
+- synonym: EDS
+  examples: |
+    - E.D.S
+    - Enquête Démographie et Santé
+- synonym: RGPH
+  examples: |
+    - rgph
+    - R.G.P.H
+    - RGPH5
+    - recensement Général de la population et de l'habitat
+- synonym: chômage
+  examples: |
+    - chomage
+- synonym: RGE
+  examples: |
+    - Recensement Général des entreprise
+- synonym: BDEF
+  examples: |
+    - Banque de données économiques et financières
 - intent: faq/ask_Agriculture
   examples: |
     - je souhaite avoir les données sur la production agricole ?
@@ -303,42 +342,3 @@ nlu:
     - je veux des statistiques sur la santé publique
     - je veux télécharger le dernier rapport de l'EDS
     - donne moi le lien pour télécharger l'EDS
-synonym : Sénégal
-  examples: |
-    - senegal
-    - galsene
-    - SN
-    - sénégal
-    - SENEGAL
-synonym : PIB
-  examples: |
-    - pib
-    - P.I.B
-    - Produit intérieur brut
-    - produit interieur brut
-synonym : ANSD
-  examples: |
-    - ansd
-    - A.N.S.D
-    - ands
-    - Agence Nationale de la Statistique et de la Démgoraphie
-    - a.n.s.d
-synonym : EDS
-  examples: |
-    - E.D.S
-    - Enquête Démographie et Santé
-synonym : RGPH
-  examples: |
-    - rgph
-    - R.G.P.H
-    - RGPH5
-    - recensement Général de la population et de l'habitat
-synonym : chômage
-  examples: |
-    - chomage
-synonym : RGE
-  examples: |
-    - Recensement Général des entreprise
-synonym : BDEF
-  examples: |
-    - Banque de données économiques et financières
