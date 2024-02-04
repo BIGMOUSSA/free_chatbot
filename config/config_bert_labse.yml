@@ -7,8 +7,8 @@ pipeline:
   model_name: bert
   model_weights: "rasa/LaBSE"
 - name: "DIETClassifier"
-  epochs: 300
-  learning_rate: 0.001
+  epochs: 200
+  learning_rate: 0.01
   constrain_similarities: True
 
 - name: RegexFeaturizer
@@ -31,7 +31,7 @@ policies:
 - name: RulePolicy
   core_fallback_threshold: 0.7
   core_fallback_action_name: "action_default_fallback"
-  enable_fallback_prediction: True
+  #enable_fallback_prediction: True
 - name: UnexpecTEDIntentPolicy
   max_history: 6
   epochs: 100

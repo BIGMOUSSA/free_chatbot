@@ -31,6 +31,7 @@ jobs:
          pip3 install 'rasa[spacy]'
          python3 -m spacy download fr_core_news_md
          pip3 install transformers
+         pip3 install pandas
         # pip3 install --upgrade rasa
 
       #- name: Use Node.js 16
@@ -65,7 +66,9 @@ jobs:
             rasa test nlu --config config/config_bert_labse.yml \
             --cross-validation --runs 1 --folds 2 \
             --out gridresults/config-labse
-
+      
+      - name: extract reuslt
+        run : python extract_result.py
 
       - uses: actions/upload-artifact@v3
         with:
