@@ -10,28 +10,28 @@ pipeline:
   min_ngram: 1
   max_ngram: 4
 - name: DIETClassifier
-  epochs: 200
+  epochs: 400
   ranking_length: 5
   constrain_similarities: True
 
 - name: EntitySynonymMapper
 
-- name: ResponseSelector
-  retrieval_intent: faq
-  scale_loss: false
-  epochs: 300
-- name: ResponseSelector
-  retrieval_intent: chitchat
-  scale_loss: false
-  epochs: 300
+#- name: ResponseSelector
+#  retrieval_intent: faq
+#  scale_loss: false
+#  epochs: 300
+#- name: ResponseSelector
+#  retrieval_intent: chitchat
+#  scale_loss: false
+#  epochs: 300
 - name: FallbackClassifier
-  threshold: 0.7
+  threshold: 0.4
 
 
 policies: 
 - name: MemoizationPolicy
 - name: RulePolicy
-  core_fallback_threshold: 0.7
+  core_fallback_threshold: 0.4
   core_fallback_action_name: "action_default_fallback"
   #enable_fallback_prediction: True
 - name: UnexpecTEDIntentPolicy
