@@ -22,5 +22,7 @@ class ActionDefaultFallback(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message(template="utter_default")
+        #dispatcher.utter_message(template="utter_default")
+        answer = "Merci de reformuler votre question! \n Peut-être aussi votre question n'est pas prise en compte dans cette bot!"
+        dispatcher.utter_message(f"{answer}")
         return []

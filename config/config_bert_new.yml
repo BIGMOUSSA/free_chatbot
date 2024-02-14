@@ -1,13 +1,13 @@
 language: fr
 
 pipeline:
-  - name: WhitespaceTokenizer
-  - name: LanguageModelFeaturizer
-    model_name: "bert"
-    model_weights: "bert-base-multilingual-cased"  # Modèle BERT multilingue pré-entraîné
-  - name: "DIETClassifier"
-    epochs: 150
-    learning_rate: 0.001
+  - name: WhitespaceTokenizer  # Sépare le texte en mots
+  - name: LanguageModelFeaturizer  # Génère des représentations vectorielles du texte à l'aide de modèles de langage
+    model_name: bert
+    model_weights: "rasa/LaBSE"  # Utilisation du modèle LaBSE pour la représentation des mots
+  - name: "DIETClassifier"  # Utilisation de DIET (Dual Intent and Entity Transformer) pour la classification des intents et des entités
+    epochs: 150  # Nombre d'itérations pour l'apprentissage
+    learning_rate: 0.001  # Taux d'apprentissage
   - name: EntitySynonymMapper  # Cartographie les synonymes des entités pour une meilleure reconnaissance
   - name: ResponseSelector  # Sélectionne les réponses prédéfinies basées sur des intents de type FAQ
     epochs: 100  # Nombre d'itérations pour l'apprentissage
@@ -53,3 +53,5 @@ policies:
     max_history: 6  # Nombre maximal de tours de dialogue à considérer pour la prédiction
     epochs: 100  # Nombre d'itérations pour l'apprentissage
     constrain_similarities: true  # Contraintes pour les similarités entre les actions prédites
+
+assistant_id: 20240109-121537-express-pod  # Identifiant de l'assistant, peut être utilisé pour référence
