@@ -31,6 +31,8 @@ jobs:
          pip3 install 'rasa[spacy]'
          python3 -m spacy download fr_core_news_md
          pip3 install transformers
+         pip3 install pandas
+         pip3 install openpyxl
         # pip3 install --upgrade rasa
 
       #- name: Use Node.js 16
