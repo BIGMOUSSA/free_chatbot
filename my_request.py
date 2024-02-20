@@ -2,7 +2,7 @@ import requests
 import json
 def send_request_and_store_result(query):
     # URL of the FASPI API endpoint you want to query
-    faspi_url = "http://localhost:8000/predict"
+    faspi_url = "http://host.docker.internal:8000/predict"
 
     # Parameters to include in the request, if any
     data = {

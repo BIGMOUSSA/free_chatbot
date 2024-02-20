@@ -43,11 +43,11 @@ jobs:
       - name: create output folder
         run: mkdir -p gridresults
 
-      - name: Run NLU Tests with config_laBSE.yml
-        run: | 
-            rasa test nlu --config config/config_laBSE.yml \
-            --cross-validation --runs 1 --folds 2 \
-            --out gridresults/config-labse
+      #- name: Run NLU Tests with config_laBSE.yml
+      #  run: | 
+      #      rasa test nlu --config config/config_laBSE.yml \
+      #      --cross-validation --runs 1 --folds 2 \
+      #      --out gridresults/config-labse
         
       - name: Run NLU Tests with config-regex.yml
         run: |
@@ -55,17 +55,22 @@ jobs:
             --cross-validation --runs 1 --folds 2 \
             --out gridresults/config-regex 
 
-      - name: Run NLU with spacy
-        run: |
-            rasa test nlu --config config/config_bert_new \
-            --cross-validation --runs 1  \
-            --out gridresults/config-camembert
+      #- name: Run NLU with spacy
+      #  run: |
+      #      rasa test nlu --config config/config_bert_new \
+      #      --cross-validation --runs 1  \
+      #      --out gridresults/config-camembert
 
-      - name: Run NLU with 
+      #- name: Run NLU with 
+      #  run: |
+      #      rasa test nlu --config config/config_spacy \
+      #      --cross-validation --runs 1  \
+      #      --out gridresults/config-spacy
+      - name: Run NLU with count
         run: |
-            rasa test nlu --config config/config_spacy \
+            rasa test nlu --config config/config_counVec.yml \
             --cross-validation --runs 1  \
-            --out gridresults/config-spacy
+            --out gridresults/config-Count
 
       - name: extract reuslt
         run : python extract_result.py

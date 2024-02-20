@@ -4,10 +4,9 @@ language: "fr"
 
 pipeline:
 - name: WhitespaceTokenizer
-- name: RegexFeaturizer
-- name: LexicalSyntacticFeaturizer
 - name: CountVectorsFeaturizer
-  analyzer: "word"    # Utilisation de l'analyse de mot pour le français
+  analyzer: "word"      # Utilisation d'une analyse de mot      # Utilisation des mots vides en français
+  min_df: 3
 - name: DIETClassifier
   epochs: 150
   constrain_similarities: true
@@ -52,4 +51,4 @@ policies:
   max_history: 6
   epochs: 100
   constrain_similarities: true
-assistant_id: 20240220-162922-symmetric-lark
+assistant_id: 20240220-163612-free-billboard
