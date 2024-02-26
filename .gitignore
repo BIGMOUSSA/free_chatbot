@@ -40,3 +40,5 @@ rasa-x/
 # Compiled files
 *.pyc
 .rasa/
+results
+.db

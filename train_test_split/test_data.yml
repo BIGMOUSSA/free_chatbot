@@ -1,0 +1,154 @@
+version: "3.1"
+nlu:
+- intent: faq4/Localisation
+  examples: |
+    - Où se trouve l'ANSD ?
+- intent: faq4/rgph
+  examples: |
+    - RESULTATS DU RGPH5
+- intent: faq4/LienSiteWeb
+  examples: |
+    - Quel est le site web de l'ansd
+- intent: faq3/EnquêtesEtude
+  examples: |
+    - quel lien mène vers les enquêtes en vigueur
+- intent: faq4/Recrutement
+  examples: |
+    - je veux faire mon stage à l'ansd
+- intent: faq/société
+  examples: |
+    - je souhaite avoir des statistiques sur la justice
+- intent: faq2/MORTALITE
+  examples: |
+    - Pouvez-vous me diriger vers les rapports spécifiques de l'ANSD sur la mortalité au Sénégal?
+- intent: faq3/ses_nationale
+  examples: |
+    - où puis-je trouver le ses national
+- intent: faq3/ses_regionale
+  examples: |
+    - je souhaite télécharger la SES de [Thiès](région)
+- intent: chitchat/ask_bot
+  examples: |
+    - Ou est tu?
+- intent: chitchat/ask_salutation
+  examples: |
+    - hey
+- intent: faq4/attestation
+  examples: |
+    - je m'appelle khady sy, agent enquêteur. je veux récupérer mon attestation
+    - Je veux mon attestation de l'enquête EDS
+- intent: faq/Emploi
+  examples: |
+    - je veux consulté les données sur l'emploi des jeunes
+- intent: chitchat/ask_AuRevoir
+  examples: |
+    - super à plus
+    - bye
+- intent: faq2/MIGRATION
+  examples: |
+    - je veux accèder aux données  sur les flux migratoires et la répartition des migrants?
+- intent: faq1/EchangeEXTERIEUR
+  examples: |
+    - je souhaite consulter le solde commercial et la balance des paiements du pays?
+    - conduis moi vers les données sur le commerce extérieur?
+- intent: faq2/NATALITE
+  examples: |
+    - donne moi le lien pour télécharger l'EDS
+    - Où puis-je trouver des études récentes de l'ANSD sur la natalité au niveau national?
+- intent: faq4/AproposANSD
+  examples: |
+    - le nombre de directeur de l'ansd depuis sa création?
+    - listes des directeurs de l'ansd
+- intent: faq1/PRIX
+  examples: |
+    - cherche indice du coût de la construction
+    - où trouver la dernière publication de l'indice des prix à la construction
+- intent: faq3/Agriculture
+  examples: |
+    - je souhaite avoir les données sur la production agricole ?
+    - montre moi le rapport sur les rendements des cultures?
+- intent: faq1/CroissanceEconomique
+  examples: |
+    - Où trouver les dernières publications concernant la comptabilité sociale et ses implications sur l'économie nationale?
+    - Où puis-je trouver les publications concernant le Produit Intérieur Brut du Sénégal?
+- intent: faq1/SynthèseEconomique
+  examples: |
+    - Où puis-je trouver la dernière Note sur l'Évolution Économique Récente (NEER) du Sénégal?
+    - Pourriez-vous m'indiquer la page pour consulter le Repères statistiques.
+    - Où puis-je trouver le dernier Bulletin Mensuel des Statistiques Économiques et Financières du Sénégal?
+- intent: chitchat/ask_out_of_scope
+  examples: |
+    - Le découpage administratif du département de Rufisque
+    - z
+    - je veux apprendre un langage informatique
+- intent: faq2/POPULATION
+  examples: |
+    - Où puis-je trouver les données les plus récentes sur la population totale du Sénégal?
+    - Pouvez-vous me diriger vers les publications qui présentent des données sur la population
+    - où trouver les rapports sur la démographie
+    - guide moi vers les publications relative à la démographie
+- intent: faq1/statistiquesEntreprises
+  examples: |
+    - Où puis-je trouver la publication sur l'Indice Harmonisé de la Production Industrielle
+    - Où puis-je trouver le dernier  indice du chiffre d'affaires industriel (ICAI)?
+    - Comment accéder aux statistiques sur les immatriculations
+    - Comment puis-je accéder aux données concernant les  entreprises?
+- intent: NLG
+  examples: |
+    - l'évolution du prix de vente du ciment depuis 2003
+    - quel est le pib du sénégal
+    - quelle est le montant des recettes fiscales
+- synonym: Sénégal
+  examples: |
+    - senegal
+    - galsene
+    - SN
+    - sénégal
+    - SENEGAL
+- synonym: PIB
+  examples: |
+    - pib
+    - P.I.B
+    - Produit intérieur brut
+    - produit interieur brut
+- synonym: ANSD
+  examples: |
+    - ansd
+    - A.N.S.D
+    - ands
+    - Agence Nationale de la Statistique et de la Démgoraphie
+    - a.n.s.d
+- synonym: EDS
+  examples: |
+    - E.D.S
+    - Enquête Démographie et Santé
+- synonym: RGPH
+  examples: |
+    - rgph
+    - R.G.P.H
+    - RGPH5
+    - recensement Général de la population et de l'habitat
+- synonym: chômage
+  examples: |
+    - chomage
+- synonym: RGE
+  examples: |
+    - Recensement Général des entreprise
+- synonym: BDEF
+  examples: |
+    - Banque de données économiques et financières
+- lookup: région
+  examples: |
+    - Dakar
+    - Kaolack
+    - Matam
+    - Ziguinchor
+    - Sédhiou
+    - Kolda
+    - Thiès
+    - Saint-Louis
+    - Diourbel
+    - Kaffrine
+    - Kédouguou
+    - Tambacounda
+    - Fatick

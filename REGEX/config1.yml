@@ -21,37 +21,42 @@ pipeline:
   max_ngram: 8
 - name: DIETClassifier
   epochs: 200
-  constrain_similarities: true
+  constrain_similarities: false
 
 - name: EntitySynonymMapper
 
 - name: ResponseSelector
   epochs: 200
   retrieval_intent: faq
+  constrain_similarities: false
 
 
 - name: ResponseSelector
   epochs: 200
   retrieval_intent: faq1
+  constrain_similarities: false
 
 
 - name: ResponseSelector
   epochs: 200
   retrieval_intent: faq2
+  constrain_similarities: false
 
 
 - name: ResponseSelector
   epochs: 200
   retrieval_intent: faq3
+  constrain_similarities: false
 
 - name: ResponseSelector
   epochs: 200
   retrieval_intent: faq4
-
+  constrain_similarities: false
 
 - name: ResponseSelector
   epochs: 200
   retrieval_intent: chitchat
+  constrain_similarities: false
 #- name: ResponseSelector
 #  epochs: 200
 #  retrieval_intent: chitchat

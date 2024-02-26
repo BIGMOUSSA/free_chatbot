@@ -17,40 +17,40 @@ pipeline:
 - name: LexicalSyntacticFeaturizer
 - name: CountVectorsFeaturizer
   analyzer: char_wb
-  min_ngram: 2
-  max_ngram: 8
+  min_ngram: 1
+  max_ngram: 4
 - name: DIETClassifier
-  epochs: 200
+  epochs: 100
   constrain_similarities: true
 
 - name: EntitySynonymMapper
 
 - name: ResponseSelector
-  epochs: 200
+  epochs: 100
   retrieval_intent: faq
 
 
 - name: ResponseSelector
-  epochs: 200
+  epochs: 100
   retrieval_intent: faq1
 
 
 - name: ResponseSelector
-  epochs: 200
+  epochs: 100
   retrieval_intent: faq2
 
 
 - name: ResponseSelector
-  epochs: 200
+  epochs: 100
   retrieval_intent: faq3
 
 - name: ResponseSelector
-  epochs: 200
+  epochs: 100
   retrieval_intent: faq4
 
 
 - name: ResponseSelector
-  epochs: 200
+  epochs: 100
   retrieval_intent: chitchat
 #- name: ResponseSelector
 #  epochs: 200
