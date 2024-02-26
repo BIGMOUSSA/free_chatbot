@@ -3,7 +3,7 @@ name: Clean Dataset
 on:
   push:
     branches:
-      - master_fallback  # Replace 'main' with the name of your main branch
+      - regex  # Replace 'main' with the name of your main branch
 
 jobs:
   test:
