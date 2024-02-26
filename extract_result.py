@@ -10,9 +10,9 @@ def reporting(folder, rubrique):
 if __name__ == "__main__":
     #reporting("config-labse", "intent")
     #reporting("config-labse", "response_selection")
-    reporting("config-regex", "intent")
-    reporting("config-regex", "response_selection")
+    reporting("config1", "intent")
+    reporting("config2", "response_selection")
     #reporting("config-spacy", "intent")
     #reporting("config-camembert", "intent")
-    reporting("config-Count", "intent")
-    reporting("config-Count", "response_selection")
+    reporting("config3", "intent")
+    reporting("config4", "response_selection")

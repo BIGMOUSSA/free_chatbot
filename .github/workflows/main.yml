@@ -51,26 +51,27 @@ jobs:
         
       - name: Run NLU Tests with config-regex.yml
         run: |
-            rasa test nlu --config config/config-regex.yml \
+            rasa test nlu --config REGEX/config1.yml \
             --cross-validation --runs 1 --folds 2 \
-            --out gridresults/config-regex 
+            --out gridresults/config1 
 
-      #- name: Run NLU with spacy
-      #  run: |
-      #      rasa test nlu --config config/config_bert_new \
-      #      --cross-validation --runs 1  \
-      #      --out gridresults/config-camembert
-
-      #- name: Run NLU with 
-      #  run: |
-      #      rasa test nlu --config config/config_spacy \
-      #      --cross-validation --runs 1  \
-      #      --out gridresults/config-spacy
-      - name: Run NLU with count
+      - name: Run NLU with regex2
         run: |
-            rasa test nlu --config config/config_counVec.yml \
-            --cross-validation --runs 1  \
-            --out gridresults/config-Count
+            rrasa test nlu --config REGEX/config2.yml \
+            --cross-validation --runs 1 --folds 2 \
+            --out gridresults/config2
+
+      - name: Run NLU with CONFIG 3
+        run: |
+          rasa test nlu --config REGEX/config2.yml \
+          --cross-validation --runs 1 --folds 2 \
+          --out gridresults/config2
+
+      - name: Run NLU with count CONFIG4
+        run: |
+          rasa test nlu --config REGEX/config4.yml \
+            --cross-validation --runs 1 --folds 2 \
+            --out gridresults/config4
 
       - name: extract reuslt
         run : python extract_result.py
