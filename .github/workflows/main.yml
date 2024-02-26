@@ -3,7 +3,7 @@ name: Clean Dataset
 on:
   push:
     branches:
-      - regex  # Replace 'main' with the name of your main branch
+      - transformers  # Replace 'main' with the name of your main branch
 
 jobs:
   test:
@@ -72,10 +72,27 @@ jobs:
           rasa test nlu --config REGEX/config4.yml \
             --cross-validation --runs 1 --folds 2 \
             --out gridresults/config4
+        
+      - name: Run NLU with count CONFIG5
+        run: |
+          rasa test nlu --config REGEX/config5.yml \
+            --cross-validation --runs 1 --folds 2 \
+            --out gridresults/config5
 
+      - name: Run NLU with count CONFIG6
+        run: |
+          rasa test nlu --config REGEX/config6.yml \
+            --cross-validation --runs 1 --folds 2 \
+            --out gridresults/config6
+
+      - name: Run NLU with count CONFIG7
+        run: |
+              rasa test nlu --config REGEX/config7.yml \
+                --cross-validation --runs 1 --folds 2 \
+                --out gridresults/config7
       - name: extract reuslt
         run : python extract_result.py
       - uses: actions/upload-artifact@v3
         with:
-          name: test-results
+          name: TRANS1-results
           path: gridresults

@@ -9,6 +9,7 @@ pipeline:
   epochs: 150
   learning_rate: 0.001
   constrain_similarities : True
+
 - name: EntitySynonymMapper    # Cartographie les synonymes des entités pour une meilleure reconnaissance
 - name: ResponseSelector    # Sélectionne les réponses prédéfinies basées sur des intents de type FAQ
   epochs: 100    # Nombre d'itérations pour l'apprentissage
@@ -19,27 +20,27 @@ pipeline:
 - name: ResponseSelector
   epochs: 100
   retrieval_intent: faq1    # Intent spécifique pour FAQ1
-
+- name: EntitySynonymMapper
 - name: ResponseSelector
   epochs: 100
   retrieval_intent: faq2    # Intent spécifique pour FAQ2
-
+- name: EntitySynonymMapper
 - name: ResponseSelector
   epochs: 100
   retrieval_intent: faq3    # Intent spécifique pour FAQ3
-
+- name: EntitySynonymMapper
 - name: ResponseSelector
   epochs: 100
   retrieval_intent: faq4    # Intent spécifique pour FAQ4
 
-    # Répéter EntitySynonymMapper pour le traitement des synonymes des entités dans les chitchats
+- name: EntitySynonymMapper    # Répéter EntitySynonymMapper pour le traitement des synonymes des entités dans les chitchats
 - name: ResponseSelector    # Réponse aux chitchats
   epochs: 100
   retrieval_intent: chitchat
 
 - name: FallbackClassifier    # Classifier de secours pour les cas où l'intention de l'utilisateur n'est pas claire
-  threshold: 0.7    # Seuil de confiance pour déterminer si une intention est prévue par le modèle
-  ambiguity_threshold: 0.1    # Seuil de confusion pour gérer les cas où plusieurs intents sont détectés avec une similarité élevée
+  threshold: 0.6    # Seuil de confiance pour déterminer si une intention est prévue par le modèle
+  ambiguity_threshold: 0.2    # Seuil de confusion pour gérer les cas où plusieurs intents sont détectés avec une similarité élevée
 
 policies:
 - name: MemoizationPolicy    # Politique pour mémoriser les dialogues précédents
@@ -49,7 +50,7 @@ policies:
   enable_fallback_prediction: true    # Activation de la prédiction de fallback
 - name: UnexpecTEDIntentPolicy    # Politique pour gérer les intents inattendus
   max_history: 6    # Nombre maximal de tours de dialogue à considérer pour la prédiction
-  epochs: 100    # Nombre d'itérations pour l'apprentissage
+  epochs: 150    # Nombre d'itérations pour l'apprentissage
 - name: TEDPolicy    # Utilisation de Transformer Embedding Dialogue (TED) pour la prédiction des actions
   max_history: 6    # Nombre maximal de tours de dialogue à considérer pour la prédiction
   epochs: 100    # Nombre d'itérations pour l'apprentissage

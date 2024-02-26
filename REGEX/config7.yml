@@ -9,6 +9,7 @@ pipeline:
   epochs: 150
   learning_rate: 0.001
   constrain_similarities : True
+  use_masked_language_model : True
 - name: EntitySynonymMapper    # Cartographie les synonymes des entités pour une meilleure reconnaissance
 - name: ResponseSelector    # Sélectionne les réponses prédéfinies basées sur des intents de type FAQ
   epochs: 100    # Nombre d'itérations pour l'apprentissage
