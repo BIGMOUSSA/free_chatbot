@@ -57,7 +57,7 @@ jobs:
 
       - name: Run NLU with regex2
         run: |
-            rrasa test nlu --config REGEX/config2.yml \
+            rasa test nlu --config REGEX/config2.yml \
             --cross-validation --runs 1 --folds 2 \
             --out gridresults/config2
 
