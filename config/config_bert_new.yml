@@ -18,20 +18,20 @@ pipeline:
   - name: ResponseSelector
     epochs: 100
     retrieval_intent: faq1  # Intent spécifique pour FAQ1
-  - name: EntitySynonymMapper
+
   - name: ResponseSelector
     epochs: 100
     retrieval_intent: faq2  # Intent spécifique pour FAQ2
-  - name: EntitySynonymMapper
+ 
   - name: ResponseSelector
     epochs: 100
     retrieval_intent: faq3  # Intent spécifique pour FAQ3
-  - name: EntitySynonymMapper
+  
   - name: ResponseSelector
     epochs: 100
     retrieval_intent: faq4  # Intent spécifique pour FAQ4
 
-  - name: EntitySynonymMapper  # Répéter EntitySynonymMapper pour le traitement des synonymes des entités dans les chitchats
+  # Répéter EntitySynonymMapper pour le traitement des synonymes des entités dans les chitchats
   - name: ResponseSelector  # Réponse aux chitchats
     epochs: 100
     retrieval_intent: chitchat

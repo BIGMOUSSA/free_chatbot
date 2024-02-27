@@ -3,7 +3,7 @@ name: Clean Dataset
 on:
   push:
     branches:
-      - transformers  # Replace 'main' with the name of your main branch
+      - transformers_LaBSE  # Replace 'main' with the name of your main branch
 
 jobs:
   test:
@@ -115,5 +115,5 @@ jobs:
         run : python extract_result.py
       - uses: actions/upload-artifact@v3
         with:
-          name: TRANS_cam_add_c_sim-results
+          name: TRANS_LaBSE_v1
           path: gridresults
