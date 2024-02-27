@@ -54,12 +54,16 @@ jobs:
             rasa test nlu --config REGEX/config1.yml \
             --cross-validation --runs 1 --folds 2 \
             --out gridresults/config1 
+      - name : copy config 1
+        run : cp REGEX/config1.yml gridresults/config1
 
       - name: Run NLU with regex2
         run: |
             rasa test nlu --config REGEX/config2.yml \
             --cross-validation --runs 1 --folds 2 \
             --out gridresults/config2
+      - name : copy config 2
+        run : cp REGEX/config2.yml gridresults/config2
 
       - name: Run NLU with CONFIG 3
         run: |
@@ -67,11 +71,17 @@ jobs:
           --cross-validation --runs 1 --folds 2 \
           --out gridresults/config3
 
+      - name : copy config 3
+        run : cp REGEX/config3.yml gridresults/config3
+
       - name: Run NLU with count CONFIG4
         run: |
           rasa test nlu --config REGEX/config4.yml \
             --cross-validation --runs 1 --folds 2 \
             --out gridresults/config4
+
+      - name : copy config 4
+        run : cp REGEX/config4.yml gridresults/config4
         
       - name: Run NLU with count CONFIG5
         run: |
@@ -79,20 +89,31 @@ jobs:
             --cross-validation --runs 1 --folds 2 \
             --out gridresults/config5
 
+
+      - name : copy config 5
+        run : cp REGEX/config5.yml gridresults/config5
+
       - name: Run NLU with count CONFIG6
         run: |
           rasa test nlu --config REGEX/config6.yml \
             --cross-validation --runs 1 --folds 2 \
             --out gridresults/config6
 
+      - name : copy config 6
+        run : cp REGEX/config6.yml gridresults/config6
+
       - name: Run NLU with count CONFIG7
         run: |
               rasa test nlu --config REGEX/config7.yml \
                 --cross-validation --runs 1 --folds 2 \
                 --out gridresults/config7
+
+      - name : copy config 7
+        run : cp REGEX/config7.yml gridresults/config7
+
       - name: extract reuslt
         run : python extract_result.py
       - uses: actions/upload-artifact@v3
         with:
-          name: TRANS1-results
+          name: TRANS_cam_add_c_sim-results
           path: gridresults
