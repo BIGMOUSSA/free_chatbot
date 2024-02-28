@@ -1,21 +1,26 @@
 language: fr
-# MAX DEFAULT, setting remove synomime mapper
+# MAX DEFAULT
 pipeline:
   - name: WhitespaceTokenizer  # Sépare le texte en mots
   - name: LanguageModelFeaturizer  # Génère des représentations vectorielles du texte à l'aide de modèles de langage
     model_name: bert
     model_weights: "rasa/LaBSE"  # Utilisation du modèle LaBSE pour la représentation des mots
   - name: "DIETClassifier"  # Utilisation de DIET (Dual Intent and Entity Transformer) pour la classification des intents et des entités
+    constrain_similarities: True
     #epochs: 150  # Nombre d'itérations pour l'apprentissage
     #learning_rate: 0.001  # Taux d'apprentissage
-  - name: EntitySynonymMapper  # Cartographie les synonymes des entités pour une meilleure reconnaissance
   - name: "RegexFeaturizer"
+    # Text will be processed with case sensitive as default
+    case_sensitive: True
+    # use match word boundaries for lookup table
+    use_word_boundaries: True
+  - name: EntitySynonymMapper  # Cartographie les synonymes des entités pour une meilleure reconnaissance
   - name: ResponseSelector  # Sélectionne les réponses prédéfinies basées sur des intents de type FAQ
     #epochs: 100  # Nombre d'itérations pour l'apprentissage
     retrieval_intent: faq  # Intent utilisé pour récupérer les réponses de FAQ
 
 # Ajout de ResponseSelectors et EntitySynonymMappers pour chaque type de FAQ spécifique
-  #- name: EntitySynonymMapper
+  - name: EntitySynonymMapper
   - name: ResponseSelector
     #epochs: 100
     retrieval_intent: faq1  # Intent spécifique pour FAQ1

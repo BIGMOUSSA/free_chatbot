@@ -5,16 +5,18 @@ pipeline:
   - name: LanguageModelFeaturizer  # Génère des représentations vectorielles du texte à l'aide de modèles de langage
     model_name: bert
     model_weights: "rasa/LaBSE"  # Utilisation du modèle LaBSE pour la représentation des mots
-  - name: CRFEntityExtractor
+  #- name: CRFEntityExtractor
   - name: LogisticRegressionClassifier
-      max_iter: 100
-      solver: lbfgs
-      tol: 0.0001
-      random_state: 42
-      ranking_length: 10
-  #- name: "DIETClassifier"  # Utilisation de DIET (Dual Intent and Entity Transformer) pour la classification des intents et des entités
+    max_iter: 100
+    solver: lbfgs
+    tol: 0.0001
+    random_state: 42
+    ranking_length: 10
+  - name: "DIETClassifier"  # Utilisation de DIET (Dual Intent and Entity Transformer) pour la classification des intents et des entités
+    intent_classification : False
     #epochs: 150  # Nombre d'itérations pour l'apprentissage
     #learning_rate: 0.001  # Taux d'apprentissage
+  - name: "RegexFeaturizer"
   - name: EntitySynonymMapper  # Cartographie les synonymes des entités pour une meilleure reconnaissance
   - name: ResponseSelector  # Sélectionne les réponses prédéfinies basées sur des intents de type FAQ
     #epochs: 100  # Nombre d'itérations pour l'apprentissage

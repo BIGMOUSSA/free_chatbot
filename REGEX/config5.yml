@@ -9,6 +9,7 @@ pipeline:
     #epochs: 150  # Nombre d'itérations pour l'apprentissage
     entity_recognition: false
     learning_rate: 0.001  # Taux d'apprentissage
+  - name: "RegexFeaturizer"
   - name: EntitySynonymMapper  # Cartographie les synonymes des entités pour une meilleure reconnaissance
   - name: ResponseSelector  # Sélectionne les réponses prédéfinies basées sur des intents de type FAQ
     #epochs: 100  # Nombre d'itérations pour l'apprentissage
