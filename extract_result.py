@@ -24,3 +24,5 @@ if __name__ == "__main__":
     reporting("config6", "response_selection")
     reporting("config7", "intent")
     reporting("config7", "response_selection")
+    reporting("config8", "intent")
+    reporting("config8", "response_selection")

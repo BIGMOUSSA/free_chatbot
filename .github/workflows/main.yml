@@ -3,7 +3,7 @@ name: Clean Dataset
 on:
   push:
     branches:
-      - transformers_LaBSE  # Replace 'main' with the name of your main branch
+      - spacy  # Replace 'main' with the name of your main branch
 
 jobs:
   test:
@@ -24,12 +24,12 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
-          python-version: 3.10.9  # Replace '3.x' with your Python version
+          python-version: 3.10.9  # Replace '3.x' with your Python version #python3 -m spacy download fr_core_news_md
 
       - name: Install dependencies
         run: |
-         pip3 install 'rasa[spacy]'
-         python3 -m spacy download fr_core_news_md
+         pip3 install 'rasa[spacy]' 
+         python3 -m spacy download fr_dep_news_trf
          pip3 install transformers
          pip3 install pandas
          pip3 install openpyxl
@@ -111,9 +111,18 @@ jobs:
       - name : copy config 7
         run : cp REGEX/config7.yml gridresults/config7
 
+      - name: Run NLU with count CONFIG8
+        run: |
+            rasa test nlu --config REGEX/config8.yml \
+              --cross-validation --runs 1 --folds 2 \
+              --out gridresults/config8
+
+      - name : copy config 8
+        run : cp REGEX/config8.yml gridresults/config8
+
       - name: extract reuslt
         run : python extract_result.py
       - uses: actions/upload-artifact@v3
         with:
-          name: TRANS_LaBSE_v1
+          name: spacy_v1
           path: gridresults
