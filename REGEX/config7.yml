@@ -2,55 +2,55 @@ recipe: default.v1
 ## CONF 5 WIHR CONSTRAIN SIM DIET SET TO TRUE? SETTING MIN GRAM MAX GRAM 2 AND 8
 language: fr
 pipeline:
-- name: SpacyNLP
-  model: fr_dep_news_trf
-- name: SpacyTokenizer
-- name: SpacyFeaturizer
-  pooling: max # testing max
-- name: LexicalSyntacticFeaturizer
-- name: CountVectorsFeaturizer
-- name: CountVectorsFeaturizer
-  analyzer: char_wb
-  min_ngram: 2
-  max_ngram: 8
+  - name: SpacyNLP
+    model: fr_dep_news_trf
+  - name: SpacyTokenizer
+  - name: SpacyFeaturizer
+    pooling: max # testing max
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 2
+    max_ngram: 8
 
-- name: "RegexFeaturizer"
-- name: DIETClassifier
-  constrain_similarities: true
- # epochs: 150
+  - name: "RegexFeaturizer"
+  - name: DIETClassifier
+    constrain_similarities: true
+  # epochs: 150
 
 
-- name: SpacyEntityExtractor # Cartographie les synonymes des entités pour une meilleure reconnaissance
-- name: ResponseSelector  # Sélectionne les réponses prédéfinies basées sur des intents de type FAQ
- # epochs: 100  # Nombre d'itérations pour l'apprentissage
-  retrieval_intent: faq  # Intent utilisé pour récupérer les réponses de FAQ
+  - name: SpacyEntityExtractor # Cartographie les synonymes des entités pour une meilleure reconnaissance
+  - name: ResponseSelector  # Sélectionne les réponses prédéfinies basées sur des intents de type FAQ
+  # epochs: 100  # Nombre d'itérations pour l'apprentissage
+    retrieval_intent: faq  # Intent utilisé pour récupérer les réponses de FAQ
 
-# Ajout de ResponseSelectors et EntitySynonymMappers pour chaque type de FAQ spécifique
-- name: SpacyEntityExtractor
-- name: ResponseSelector
- # epochs: 100
-  retrieval_intent: faq1  # Intent spécifique pour FAQ1
-- name: SpacyEntityExtractor
-- name: ResponseSelector
-  #epochs: 100
-  retrieval_intent: faq2  # Intent spécifique pour FAQ2
-- name: SpacyEntityExtractor
-- name: ResponseSelector
-  #epochs: 100
-  retrieval_intent: faq3  # Intent spécifique pour FAQ3
-- name: SpacyEntityExtractor
-- name: ResponseSelector
-  #epochs: 100
-  retrieval_intent: faq4  # Intent spécifique pour FAQ4
+  # Ajout de ResponseSelectors et EntitySynonymMappers pour chaque type de FAQ spécifique
+  - name: SpacyEntityExtractor
+  - name: ResponseSelector
+  # epochs: 100
+    retrieval_intent: faq1  # Intent spécifique pour FAQ1
+  - name: SpacyEntityExtractor
+  - name: ResponseSelector
+    #epochs: 100
+    retrieval_intent: faq2  # Intent spécifique pour FAQ2
+  - name: SpacyEntityExtractor
+  - name: ResponseSelector
+    #epochs: 100
+    retrieval_intent: faq3  # Intent spécifique pour FAQ3
+  - name: SpacyEntityExtractor
+  - name: ResponseSelector
+    #epochs: 100
+    retrieval_intent: faq4  # Intent spécifique pour FAQ4
 
-- name: SpacyEntityExtractor  # Répéter EntitySynonymMapper pour le traitement des synonymes des entités dans les chitchats
-- name: ResponseSelector  # Réponse aux chitchats
-  #epochs: 100
-  retrieval_intent: chitchat
+  - name: SpacyEntityExtractor  # Répéter EntitySynonymMapper pour le traitement des synonymes des entités dans les chitchats
+  - name: ResponseSelector  # Réponse aux chitchats
+    #epochs: 100
+    retrieval_intent: chitchat
 
-- name: FallbackClassifier  # Classifier de secours pour les cas où l'intention de l'utilisateur n'est pas claire
-  threshold: 0.6  # Seuil de confiance pour déterminer si une intention est prévue par le modèle
-  ambiguity_threshold: 0.2  # Seuil de confusion pour gérer les cas où plusieurs intents sont détectés avec une similarité élevée
+  - name: FallbackClassifier  # Classifier de secours pour les cas où l'intention de l'utilisateur n'est pas claire
+    threshold: 0.6  # Seuil de confiance pour déterminer si une intention est prévue par le modèle
+    ambiguity_threshold: 0.2  # Seuil de confusion pour gérer les cas où plusieurs intents sont détectés avec une similarité élevée
 
 policies:
 - name: MemoizationPolicy    # Politique pour mémoriser les dialogues précédents

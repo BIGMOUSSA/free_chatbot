@@ -2,17 +2,17 @@ recipe: default.v1
 
 language: fr
 pipeline:
-- name: SpacyNLP
-  model: fr_dep_news_trf
-- name: SpacyTokenizer
-- name: LanguageModelFeaturizer
-  model_name: bert
-  model_weights: "rasa/LaBSE"
-- name: DIETClassifier
-  epochs: 150
-  constrain_similarities: true
+  - name: SpacyNLP
+    model: fr_dep_news_trf
+  - name: SpacyTokenizer
+  - name: LanguageModelFeaturizer
+    model_name: bert
+    model_weights: "rasa/LaBSE"
+  - name: DIETClassifier
+    epochs: 150
+    constrain_similarities: true
 
-- name: "RegexFeaturizer"
+  - name: "RegexFeaturizer"
   - name: EntitySynonymMapper  # Cartographie les synonymes des entités pour une meilleure reconnaissance
   - name: ResponseSelector  # Sélectionne les réponses prédéfinies basées sur des intents de type FAQ
     epochs: 100  # Nombre d'itérations pour l'apprentissage
