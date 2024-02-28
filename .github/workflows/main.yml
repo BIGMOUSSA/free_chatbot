@@ -65,14 +65,14 @@ jobs:
       - name : copy config 2
         run : cp REGEX/config2.yml gridresults/config2
 
-      #- name: Run NLU with CONFIG 3
-      #  run: |
-      #    rasa test nlu --config REGEX/config3.yml \
-      #    --cross-validation --runs 1 --folds 2 \
-      #    --out gridresults/config3
+      - name: Run NLU with CONFIG 3
+        run: |
+          rasa test nlu --config REGEX/config3.yml \
+          --cross-validation --runs 1 --folds 2 \
+          --out gridresults/config3
 
-      #- name : copy config 3
-      #  run : cp REGEX/config3.yml gridresults/config3
+      - name : copy config 3
+        run : cp REGEX/config3.yml gridresults/config3
 
       - name: Run NLU with count CONFIG4
         run: |
