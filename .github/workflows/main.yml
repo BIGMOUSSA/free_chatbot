@@ -30,6 +30,9 @@ jobs:
         run: |
          pip3 install 'rasa[spacy]' 
          python3 -m spacy download fr_dep_news_trf
+         python3 -m spacy download fr_core_news_sm
+         python3 -m spacy download fr_core_news_md
+         python3 -m spacy download fr_core_news_lg
          pip3 install transformers
          pip3 install pandas
          pip3 install openpyxl
@@ -108,21 +111,21 @@ jobs:
                 --cross-validation --runs 1 --folds 2 \
                 --out gridresults/config7
 
-      - name : copy config 7
-        run : cp REGEX/config7.yml gridresults/config7
+      #- name : copy config 7
+      #  run : cp REGEX/config7.yml gridresults/config7
 
-      - name: Run NLU with count CONFIG8
-        run: |
-            rasa test nlu --config REGEX/config8.yml \
-              --cross-validation --runs 1 --folds 2 \
-              --out gridresults/config8
+      #- name: Run NLU with count CONFIG8
+      #  run: |
+      #      rasa test nlu --config REGEX/config8.yml \
+      #        --cross-validation --runs 1 --folds 2 \
+      #        --out gridresults/config8
 
-      - name : copy config 8
-        run : cp REGEX/config8.yml gridresults/config8
+      #- name : copy config 8
+      #  run : cp REGEX/config8.yml gridresults/config8
 
-      - name: extract reuslt
-        run : python extract_result.py
+      #- name: extract reuslt
+      #  run : python extract_result.py
       - uses: actions/upload-artifact@v3
         with:
-          name: spacy_v1
+          name: spacy_v2
           path: gridresults
