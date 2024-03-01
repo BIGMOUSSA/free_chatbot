@@ -9,6 +9,11 @@ pipeline:
   epochs: 150
   learning_rate: 0.001
   constrain_similarities : True
+- name: "RegexFeaturizer"
+  # Text will be processed with case sensitive as default
+  case_sensitive: True
+  # use match word boundaries for lookup table
+  use_word_boundaries: True
 
 - name: EntitySynonymMapper    # Cartographie les synonymes des entités pour une meilleure reconnaissance
 - name: ResponseSelector    # Sélectionne les réponses prédéfinies basées sur des intents de type FAQ
