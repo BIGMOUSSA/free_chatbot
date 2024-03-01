@@ -111,5 +111,5 @@ jobs:
         run : python extract_result.py
       - uses: actions/upload-artifact@v3
         with:
-          name: TRANS_LaBSE_FINAL
+          name: TRANS_LaBSE_FINAL_V2
           path: gridresults
